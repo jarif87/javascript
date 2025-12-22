@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var num1 = 10;
 var num2 = 20;
 var a = num1 + num2;
@@ -64,7 +63,7 @@ console.log(total);
 
 random = Math.random();
 console.log(random);
-=======
+
 var num1 = 10;
 var num2 = 20;
 var a = num1 + num2;
@@ -130,4 +129,3 @@ console.log(total);
 
 random = Math.random();
 console.log(random);
->>>>>>> ebf15f2cfa3993c769a1cf66e70ff1f20fb89851

@@ -1,0 +1,23 @@
+console.log("Operators");
+console.log("#".repeat(100));
+let m = 10;
+let n = 20;
+let a = 10;
+let b = 30;
+console.log("Addition:", m + n);
+console.log("#".repeat(100));
+console.log("Substruction", m - n);
+console.log("#".repeat(100));
+console.log("Multipy", m * n);
+console.log("#".repeat(100));
+console.log("Division", m / n);
+console.log("#".repeat(100));
+console.log("Exponential", m ** n);
+console.log("#".repeat(100));
+console.log("reminder", m % n);
+console.log("#".repeat(100));
+console.log("comparison: ", m == n);
+
+console.log("comparison result: ", m != n);
+console.log("Logical Operator: ", a < b && m == 10);
+console.log("Logical Operator: ", a > b || m == 10);

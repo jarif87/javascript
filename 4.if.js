@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var a = 10;
 var b = 20;
 
@@ -44,7 +43,7 @@ switch (m) {
   default:
     console.log("Poor World");
 }
-=======
+
 var a = 10;
 var b = 20;
 
@@ -90,4 +89,3 @@ switch (m) {
   default:
     console.log("Poor World");
 }
->>>>>>> ebf15f2cfa3993c769a1cf66e70ff1f20fb89851
