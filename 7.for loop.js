@@ -27,3 +27,31 @@ for (let i = 0; i < 10; i++) {
 for (let i = 0; i < 10; i++) {
   console.log(i + 1);
 }
+
+let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+function square(x) {
+  return x * x;
+}
+let result = a.map(square);
+console.log(result);
+
+//Array.from
+let h = "hello bangladesh";
+let str = Array.from(h);
+console.log(str);
+
+//for of
+
+let b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+for (let i of b) {
+  console.log(i);
+}
+
+//for in
+let c = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+for (let j in c) {
+  console.log(c[j]);
+  console.log("#".repeat(50));
+  console.log(j);
+}
