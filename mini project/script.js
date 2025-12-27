@@ -28,6 +28,7 @@ const mean = (a, b, c) => {
 console.log(mean(1, 2, 3));
 */
 
+/*
 function average_abc() {
   let a = Number(prompt("ENter first Number: "));
   let b = Number(prompt("Enter second Number: "));
@@ -38,3 +39,53 @@ function average_abc() {
 }
 
 console.log(average_abc());
+*/
+
+/*
+let a = [1, 2, 3, 4, 5, 6, 66];
+let b = prompt("Enter Your Number: ");
+b = Number.parseInt(b);
+a.push(b);
+console.log(b);
+*/
+
+/*
+let arr = [1, 2, 3, 4, 5, 6, 7, 83];
+let a;
+
+do {
+  a = Number.parseInt(prompt("Enter a number"));
+  arr.push(a);
+} while (a !== 0);
+
+arr.pop(); // remove 0
+console.log(arr);
+*/
+
+/*
+let arr = [1, 2, 3, 4, 5, 6, 7, 83, 10, 20, 30, 40];
+
+function hello_world(x) {
+  return x % 2 === 0;
+}
+
+console.log(arr.map(hello_world));
+*/
+
+/*
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 83, 10, 20, 30, 40];
+function square(a) {
+  return a * a;
+}
+console.log(arr.map(square));
+*/
+
+/*
+
+let my_array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+function hello_reduce(x1, x2) {
+  return x1 * x2;
+}
+console.log(my_array.reduce(hello_reduce));
+*/
