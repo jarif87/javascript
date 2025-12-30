@@ -89,3 +89,15 @@ function hello_reduce(x1, x2) {
 }
 console.log(my_array.reduce(hello_reduce));
 */
+
+/*
+document.getElementsByName("nav")[0].firstElementChild.style.color = "orange";
+*/
+document.getElementsByTagName("nav")[0].firstElementChild.style.color =
+  "orange";
+
+document.getElementsByTagName("nav")[0].lastElementChild.style.color = "red";
+
+Array.from(document.getElementsByTagName("li")).forEach((element) => {
+  element.style.background = "cyan";
+});
