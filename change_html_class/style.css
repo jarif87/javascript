@@ -1,0 +1,39 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.yellow {
+  background-color: yellow;
+}
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.orange {
+  background-color: orange;
+}
+.text-white {
+  color: white;
+}
+.text-black {
+  color: black;
+}
+.text-blue {
+  color: blue;
+}
+.text-yellow {
+  color: yellow;
+}
+.text-red {
+  color: red;
+}
