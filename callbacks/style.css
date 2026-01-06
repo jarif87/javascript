@@ -1,0 +1,19 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+h1 {
+  font-family: "Arial", sans-serif;
+  color: green;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 24px;
+  font-family: hack;
+  font-weight: regular;
+}
