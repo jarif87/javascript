@@ -40,5 +40,3 @@ let parts = str.split(" ");
 let lastWord = parts[parts.length - 1];
 
 console.log(lastWord); // 1000
-
-//string cannot change it is immutable
