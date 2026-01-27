@@ -1,3 +1,4 @@
+/*
 class ClassData {
   constructor(name = "", trainno = null, address, time) {
     console.log("Constructor Called");
@@ -36,3 +37,78 @@ formA.submit();
 formB.preview();
 formB.submit();
 formB.cancel();
+*/
+
+/*
+
+class Employee {
+  login() {
+    console.log("Employee has Logged in");
+  }
+  logout() {
+    console.log("Employee Logged Out");
+  }
+  requestLeaves(leaves) {
+    console.log("Employee has request ${leaves} leaves");
+  }
+}
+
+class Programmer extends Employee {
+  requestCoffe(x) {
+    console.log("Employee Has requested ${x} Coffes");
+  }
+
+  requestLeaves(leaves) {
+    super.requestLeaves();
+    console.log("Employee has request ${leaves+1} leaves one Extra guranted");
+  }
+}
+
+// let e = new Employee();
+// e.login();
+// e.requestLeaves();
+
+let f = new Programmer();
+f.login();
+f.requestLeaves();
+*/
+
+class Employee {
+  constructor(name) {
+    console.log("Employee Constructor is Here");
+    this.name = name;
+  }
+  login() {
+    console.log("Employee has Logged in");
+  }
+  logout() {
+    console.log("Employee Logged Out");
+  }
+  requestLeaves(leaves) {
+    console.log("Employee has request ${leaves} leaves");
+  }
+}
+
+class Programmer extends Employee {
+  constructor(name) {
+    super(name);
+    console.log(this.name + " -- Programmers Constructor is Here");
+    this.name = name;
+  }
+  requestCoffe(x) {
+    console.log("Employee Has requested ${x} Coffes");
+  }
+
+  requestLeaves(leaves) {
+    super.requestLeaves();
+    console.log("Employee has request ${leaves+1} leaves one Extra guranted");
+  }
+}
+
+// let e = new Employee();
+// e.login();
+// e.requestLeaves();
+
+let f = new Programmer("Snowden");
+f.login();
+f.requestLeaves();
