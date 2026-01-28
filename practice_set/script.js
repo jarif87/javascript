@@ -1,3 +1,5 @@
+/*
+
 document.addEventListener("DOMContentLoaded", () => {
   const cardContainer = document.getElementById("cardContainer");
   const numberToCheck = 42;
@@ -52,3 +54,89 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>`;
     });
 });
+*/
+
+/*
+
+class Complex {
+  constructor(real, imaginary) {
+    this.real = real;
+    this.imaginary = imaginary;
+  }
+
+  add(num) {
+    let r = this.real + num.real;
+    let i = this.imaginary + num.imaginary;
+    return new Complex(r, i);
+  }
+}
+
+let a = new Complex(5, 6);
+let b = new Complex(10, 11);
+
+console.log(a.add(b)); // Complex { real: 15, imaginary: 17 }
+console.log(a.real, b.imaginary); // 5 11 (original values unchanged)
+*/
+
+// class Human {
+//   constructor(name, food) {
+//     this.name = name;
+//     this.food = food;
+//   }
+//   walk() {
+//     console.log(this.name + " Human Is Walking");
+//   }
+// }
+
+// class student extends Human {
+//   walk() {
+//     console.log(this.name + " student is walking");
+//   }
+// }
+
+// let a = new student("Shakib", "PiZZA");
+// a.walk();
+
+// let b = new Human("Rakib", "burger");
+// b.walk();
+
+class Complex {
+  constructor(real, imaginary) {
+    this._real = real;
+    this._imaginary = imaginary;
+  }
+
+  add(num) {
+    let r = this._real + num._real;
+    let i = this._imaginary + num._imaginary;
+    return new Complex(r, i);
+  }
+
+  get real() {
+    return this._real;
+  }
+
+  get imaginary() {
+    return this._imaginary;
+  }
+
+  set real(newReal) {
+    this._real = newReal;
+  }
+
+  set imaginary(newImaginary) {
+    this._imaginary = newImaginary;
+  }
+
+  toString() {
+    return `${this._real} + ${this._imaginary}i`;
+  }
+}
+
+let a = new Complex(5, 6);
+a.real = 19;
+a.imaginary = 21;
+let b = new Complex(10, 11);
+
+console.log(a.add(b).toString()); // 29 + 32i
+console.log(`${a.real} + ${b.imaginary}i`); // 19 + 11i
