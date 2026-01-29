@@ -100,6 +100,7 @@ console.log(a.real, b.imaginary); // 5 11 (original values unchanged)
 // let b = new Human("Rakib", "burger");
 // b.walk();
 
+/*
 class Complex {
   constructor(real, imaginary) {
     this._real = real;
@@ -140,3 +141,48 @@ let b = new Complex(10, 11);
 
 console.log(a.add(b).toString()); // 29 + 32i
 console.log(`${a.real} + ${b.imaginary}i`); // 19 + 11i
+*/
+
+/*
+const a = (text) =>
+  new Promise((resolve) => setTimeout(() => resolve(text), 2000));
+
+const run = async () => {
+  const res1 = await a("hello");
+  console.log(res1);
+
+  const res2 = await a("hello world");
+  console.log(res2);
+};
+
+run();
+*/
+
+/*
+function sum(a, b, c) {
+  return a + b + c;
+}
+let x = [1, 2, 3];
+console.log(sum(...x));
+*/
+
+/*
+const a = (text, n = 2000) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(text);
+    }, n);
+  });
+};
+
+async function main() {
+  let text = await a("hello");
+  console.log(text);
+
+  text = await a("hello world");
+  console.log(text);
+}
+
+main();
+
+*/

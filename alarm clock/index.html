@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChronoAlarm | Digital Alarm Clock</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="bg-gradient"></div>
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+
+    <main class="container">
+      <header class="header">
+        <h1 class="logo">Chrono<span>Alarm</span></h1>
+        <div class="header-controls">
+          <button
+            class="format-toggle"
+            id="formatToggle"
+            title="Toggle 12/24h format"
+          >
+            <span class="format-text">12H</span>
+          </button>
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle theme"
+          >
+            <svg
+              class="sun-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg
+              class="moon-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <section class="clock-section">
+        <div class="clock-display glass-panel">
+          <div class="time-wrapper">
+            <div class="time" id="clockTime">00:00:00</div>
+            <div class="date" id="clockDate">Loading...</div>
+          </div>
+          <div class="ampm-indicator" id="ampm"></div>
+        </div>
+      </section>
+
+      <section class="alarm-controls glass-panel">
+        <h2 class="section-title">Set Alarm</h2>
+        <div class="time-picker" id="timePicker">
+          <div class="picker-group">
+            <button class="arrow-btn" id="hourUp">▲</button>
+            <input type="number" id="alarmHour" min="1" max="12" value="08" />
+            <button class="arrow-btn" id="hourDown">▼</button>
+            <label>Hour</label>
+          </div>
+          <span class="separator">:</span>
+          <div class="picker-group">
+            <button class="arrow-btn" id="minUp">▲</button>
+            <input
+              type="number"
+              id="alarmMin"
+              min="0"
+              max="59"
+              value="00"
+              step="1"
+            />
+            <button class="arrow-btn" id="minDown">▼</button>
+            <label>Min</label>
+          </div>
+          <div class="picker-group ampm-group" id="ampmGroup">
+            <button class="arrow-btn" id="ampmToggle">▲</button>
+            <div class="ampm-display" id="alarmAmPm">AM</div>
+            <button class="arrow-btn" id="ampmToggleDown">▼</button>
+            <label>Period</label>
+          </div>
+        </div>
+
+        <div class="alarm-options">
+          <label class="toggle-switch">
+            <span>Repeat Daily</span>
+            <input type="checkbox" id="repeatAlarm" />
+            <span class="slider"></span>
+          </label>
+          <label class="toggle-switch">
+            <span>Sound</span>
+            <input type="checkbox" id="soundEnabled" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <button class="btn btn-primary" id="setAlarmBtn">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="8" x2="12" y2="12"></line>
+            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+          </svg>
+          Add Alarm
+        </button>
+      </section>
+
+      <section class="alarms-list-section glass-panel">
+        <h2 class="section-title">Active Alarms</h2>
+        <ul class="alarms-list" id="alarmsList">
+          <li class="empty-state">
+            <span class="empty-icon">⏰</span>
+            <p>No alarms set</p>
+            <small>Set an alarm to get started</small>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Alarm Trigger Modal -->
+    <div class="modal-overlay" id="alarmModal">
+      <div class="modal-content alarm-ringing">
+        <div class="ringing-animation">
+          <div class="bell-icon">🔔</div>
+          <div class="sound-waves"><span></span><span></span><span></span></div>
+        </div>
+        <h2 class="modal-title">Wake Up!</h2>
+        <div class="modal-time" id="modalTime">08:00 AM</div>
+        <div class="modal-actions">
+          <button class="btn btn-secondary" id="snoozeBtn">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            Snooze (5m)
+          </button>
+          <button class="btn btn-stop" id="stopAlarmBtn">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+            </svg>
+            Stop
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
