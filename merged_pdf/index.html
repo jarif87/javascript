@@ -1,0 +1,61 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merge PDFs - Clean & Modern</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Merge Your PDFs</h1>
+      <p class="subtitle">
+        First file stays on top • Second file appended below
+      </p>
+
+      <div class="upload-box">
+        <label class="upload-label">First PDF (top part)</label>
+        <input
+          type="file"
+          id="pdf1"
+          accept="application/pdf"
+          class="file-input"
+        />
+        <div class="file-name" id="pdf1-name">No file chosen</div>
+      </div>
+
+      <div class="upload-box">
+        <label class="upload-label">Second PDF (bottom part)</label>
+        <input
+          type="file"
+          id="pdf2"
+          accept="application/pdf"
+          class="file-input"
+        />
+        <div class="file-name" id="pdf2-name">No file chosen</div>
+      </div>
+
+      <button id="mergeBtn" disabled>
+        <span id="btn-text">Merge PDFs</span>
+      </button>
+
+      <div
+        class="progress-container"
+        id="progressContainer"
+        style="display: none"
+      >
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <div id="status" class="status"></div>
+
+      <a id="downloadLink" class="download-btn" style="display: none">
+        Download Merged PDF
+      </a>
+    </div>
+
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
