@@ -41,4 +41,14 @@
 
 // console.log(lastWord); // 1000
 
-console.log("hello");
+// console.log("hello");
+
+console.log("hello world");
+
+// let hello = "bangladesh" + " is a good country" + " and we love it";
+// console.log(hello);
+// console.log(typeof hello);
+
+let a = "hello world" + 6;
+console.log(a);
+console.log(typeof a);
