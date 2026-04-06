@@ -56,6 +56,7 @@
 // console.log(product.preview());
 // console.log(typeof console.log);
 
+/*
 const person = {
   name: "John",
   age: 30,
@@ -83,3 +84,58 @@ console.log("#".repeat(100));
 console.log("Local Storage: ", localStorage);
 const retriveLocal = JSON.parse(localStorage.getItem("person"));
 console.log(retriveLocal);
+
+*/
+
+//auto-boxing
+
+console.log("Hello World".length);
+console.log("Hello World".toUpperCase());
+console.log("Hello World".toLowerCase());
+console.log("Hello World".indexOf("o"));
+console.log("Hello World".lastIndexOf("o"));
+console.log("Hello World".slice(0, 5));
+console.log("Hello World".substring(0, 5));
+console.log("Hello World".substr(0, 5));
+
+const object1 = { message: "Hello World" };
+console.log(object1.message.length);
+console.log(object1.message.toUpperCase());
+console.log(object1.message.toLowerCase());
+console.log(object1.message.indexOf("o"));
+console.log(object1.message.lastIndexOf("o"));
+console.log(object1.message.slice(0, 5));
+console.log(object1.message.substring(0, 5));
+console.log(object1.message.substr(0, 5));
+
+const object2 = object1;
+console.log(object2.message.length);
+
+object2.message = "Hello JavaScript";
+console.log(object1.message);
+
+const object3 = { message: "Hello World", price: 1000 };
+console.log(object3.message);
+
+const object4 = { message: "Hello World" };
+
+console.log(object3 === object4); //==>false
+
+const object5 = { message: "Hello World" };
+const object6 = object3;
+
+console.log(object5 === object6); // ✅ true
+
+//destructureing assignment
+const { message } = object3;
+console.log(message);
+
+const { price } = object3;
+console.log(price);
+
+//short hand property
+const name = "John";
+const age = 30;
+const city = "New York";
+const person = { name, age, city };
+console.log(person);

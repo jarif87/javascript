@@ -18,6 +18,7 @@
 //   });
 // }
 
+/*
 let title = document.getElementsByClassName("card-title")[0];
 let new_title = document.getElementById("hello_card");
 new_title.style.color = "green";
@@ -25,3 +26,7 @@ new_title.style.color = "green";
 let first_title = document.querySelectorAll(".card-title");
 console.log(first_title);
 console.log(document.getElementsByTagName("a"));
+*/
+
+document.body.innerHTML += "<h1> Hello World </h1>";
+document.title = "DOM Search";
