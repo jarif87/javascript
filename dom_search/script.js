@@ -27,6 +27,29 @@ let first_title = document.querySelectorAll(".card-title");
 console.log(first_title);
 console.log(document.getElementsByTagName("a"));
 */
-
+/*
 document.body.innerHTML += "<h1> Hello World </h1>";
 document.title = "DOM Search";
+console.log("#".repeat(200));
+console.log(document.body.innerHTML);
+console.log("#".repeat(200));
+console.log(document.title);
+console.log("#".repeat(200));
+console.log(document.body);
+
+console.log("#".repeat(200));
+console.log(typeof document.body);
+console.log("#".repeat(200));
+console.log(document.body instanceof HTMLElement);
+*/
+// document.body.innerHTML += "<h1> Hello World this is me </h1>";
+
+// document.body.innerHTML = (
+//   <button id="liveAlertBtn" type="button" class="btn btn-primary">
+//     Show live alert
+//   </button>
+// );
+
+console.log(document.querySelector("button"));
+console.log("#".repeat(200));
+console.log(document.querySelectorAll("body > *"));
