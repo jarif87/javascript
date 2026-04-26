@@ -50,6 +50,8 @@ console.log(document.body instanceof HTMLElement);
 //   </button>
 // );
 
+/*
 console.log(document.querySelector("button"));
 console.log("#".repeat(200));
 console.log(document.querySelectorAll("body > *"));
+*/
