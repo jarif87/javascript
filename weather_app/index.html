@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clima • 2026</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">Clima</div>
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="searchInput" placeholder="Search city..." />
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="current-card">
+          <div class="city" id="city">Dhaka, Bangladesh</div>
+          <div class="date" id="date"></div>
+
+          <div class="temp" id="temp">--°</div>
+          <div class="condition" id="condition">Loading...</div>
+
+          <div class="details">
+            <div class="detail-item">
+              <i class="fas fa-wind"></i>
+              <p id="wind">0 km/h</p>
+              <small>Wind</small>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-droplet"></i>
+              <p id="humidity">0%</p>
+              <small>Humidity</small>
+            </div>
+            <div class="detail-item">
+              <i class="fas fa-eye"></i>
+              <p id="visibility">0 km</p>
+              <small>Visibility</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="forecast">
+          <h2>5-Day Forecast</h2>
+          <div class="forecast-days" id="forecast"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
