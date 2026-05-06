@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PaletteGen</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>Palette<span>Gen</span></h1>
+      </header>
+
+      <div class="palette-container">
+        <div class="palette" id="palette"></div>
+      </div>
+
+      <div class="toolbar">
+        <button id="generateBtn" class="btn primary">✨ New Palette</button>
+        <button id="exportBtn" class="btn secondary">📋 Export CSS</button>
+        <button id="saveBtn" class="btn secondary">💾 Save</button>
+      </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
