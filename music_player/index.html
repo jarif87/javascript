@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WaveSync Music Player</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="music-player">
+        <!-- Background Blur Effect -->
+        <div class="bg-blur"></div>
+
+        <!-- Header -->
+        <div class="player-header">
+          <button class="btn-icon" id="minimizeBtn">
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <h3>Now Playing</h3>
+          <button class="btn-icon" id="uploadBtn" title="Upload Music">
+            <i class="fas fa-upload"></i>
+          </button>
+        </div>
+
+        <!-- Album Art -->
+        <div class="album-art-container">
+          <div class="album-art" id="albumArt">
+            <img
+              src="https://picsum.photos/400/400?random=1"
+              alt="Album Art"
+              id="albumImg"
+            />
+            <div class="vinyl-record" id="vinylRecord"></div>
+          </div>
+        </div>
+
+        <!-- Song Info -->
+        <div class="song-info">
+          <div class="song-details">
+            <h2 class="song-title" id="songTitle">Midnight Dreams</h2>
+            <p class="song-artist" id="songArtist">Luna Eclipse</p>
+          </div>
+          <button class="btn-icon favorite-btn" id="favoriteBtn">
+            <i class="far fa-heart"></i>
+          </button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+          <div class="progress-bar" id="progressBar">
+            <div class="progress" id="progress"></div>
+            <div class="progress-handle" id="progressHandle"></div>
+          </div>
+          <div class="time-info">
+            <span id="currentTime">0:00</span>
+            <span id="duration">0:00</span>
+          </div>
+        </div>
+
+        <!-- Main Controls -->
+        <div class="controls">
+          <button class="btn-icon control-btn" id="shuffleBtn" title="Shuffle">
+            <i class="fas fa-random"></i>
+          </button>
+          <button class="btn-icon control-btn" id="prevBtn">
+            <i class="fas fa-step-backward"></i>
+          </button>
+          <button class="play-btn" id="playBtn">
+            <i class="fas fa-play" id="playIcon"></i>
+          </button>
+          <button class="btn-icon control-btn" id="nextBtn">
+            <i class="fas fa-step-forward"></i>
+          </button>
+          <button class="btn-icon control-btn" id="repeatBtn" title="Repeat">
+            <i class="fas fa-redo"></i>
+          </button>
+        </div>
+
+        <!-- Additional Controls -->
+        <div class="extra-controls">
+          <div class="volume-control">
+            <button class="btn-icon" id="volumeBtn">
+              <i class="fas fa-volume-up" id="volumeIcon"></i>
+            </button>
+            <div class="volume-slider-container">
+              <input
+                type="range"
+                id="volumeSlider"
+                class="volume-slider"
+                min="0"
+                max="100"
+                value="70"
+              />
+            </div>
+          </div>
+          <div class="right-controls">
+            <button class="btn-icon" id="playlistBtn" title="Playlist">
+              <i class="fas fa-list-ul"></i>
+            </button>
+            <button class="btn-icon" id="eqBtn" title="Equalizer">
+              <i class="fas fa-sliders-h"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidden File Input -->
+      <input
+        type="file"
+        id="fileInput"
+        accept="audio/*"
+        multiple
+        style="display: none"
+      />
+
+      <!-- Playlist Panel -->
+      <div class="playlist-panel" id="playlistPanel">
+        <div class="playlist-header">
+          <h3>Playlist</h3>
+          <button class="btn-icon" id="closePlaylist">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="playlist-actions">
+          <button class="add-music-btn" id="addMusicBtn">
+            <i class="fas fa-plus"></i> Add Music
+          </button>
+        </div>
+        <div class="playlist-songs" id="playlistSongs">
+          <!-- Playlist items will be added dynamically -->
+        </div>
+      </div>
+
+      <!-- Equalizer Panel -->
+      <div class="eq-panel" id="eqPanel">
+        <div class="eq-header">
+          <h3>Equalizer</h3>
+          <button class="btn-icon" id="closeEq">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="eq-presets">
+          <button class="preset-btn active" data-preset="normal">Normal</button>
+          <button class="preset-btn" data-preset="pop">Pop</button>
+          <button class="preset-btn" data-preset="rock">Rock</button>
+          <button class="preset-btn" data-preset="jazz">Jazz</button>
+          <button class="preset-btn" data-preset="classical">Classical</button>
+          <button class="preset-btn" data-preset="bass">Bass Boost</button>
+        </div>
+        <div class="eq-sliders">
+          <div class="eq-slider">
+            <input
+              type="range"
+              min="-12"
+              max="12"
+              value="0"
+              class="eq-input"
+              data-band="60"
+            />
+            <span>60Hz</span>
+          </div>
+          <div class="eq-slider">
+            <input
+              type="range"
+              min="-12"
+              max="12"
+              value="0"
+              class="eq-input"
+              data-band="170"
+            />
+            <span>170Hz</span>
+          </div>
+          <div class="eq-slider">
+            <input
+              type="range"
+              min="-12"
+              max="12"
+              value="0"
+              class="eq-input"
+              data-band="310"
+            />
+            <span>310Hz</span>
+          </div>
+          <div class="eq-slider">
+            <input
+              type="range"
+              min="-12"
+              max="12"
+              value="0"
+              class="eq-input"
+              data-band="600"
+            />
+            <span>600Hz</span>
+          </div>
+          <div class="eq-slider">
+            <input
+              type="range"
+              min="-12"
+              max="12"
+              value="0"
+              class="eq-input"
+              data-band="1k"
+            />
+            <span>1kHz</span>
+          </div>
+          <div class="eq-slider">
+            <input
+              type="range"
+              min="-12"
+              max="12"
+              value="0"
+              class="eq-input"
+              data-band="3k"
+            />
+            <span>3kHz</span>
+          </div>
+          <div class="eq-slider">
+            <input
+              type="range"
+              min="-12"
+              max="12"
+              value="0"
+              class="eq-input"
+              data-band="6k"
+            />
+            <span>6kHz</span>
+          </div>
+          <div class="eq-slider">
+            <input
+              type="range"
+              min="-12"
+              max="12"
+              value="0"
+              class="eq-input"
+              data-band="12k"
+            />
+            <span>12kHz</span>
+          </div>
+          <div class="eq-slider">
+            <input
+              type="range"
+              min="-12"
+              max="12"
+              value="0"
+              class="eq-input"
+              data-band="14k"
+            />
+            <span>14kHz</span>
+          </div>
+          <div class="eq-slider">
+            <input
+              type="range"
+              min="-12"
+              max="12"
+              value="0"
+              class="eq-input"
+              data-band="16k"
+            />
+            <span>16kHz</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="audio"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
