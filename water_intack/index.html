@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💧 HydroGlow • Water Intake Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="logo">
+          <i class="fas fa-tint"></i>
+          <h1>HydroGlow</h1>
+        </div>
+        <p class="subtitle">Stay hydrated, stay glowing ✨</p>
+      </header>
+
+      <!-- Main Bottle Display -->
+      <section class="bottle-section">
+        <div class="bottle-container">
+          <!-- Bottle SVG -->
+          <div class="bottle-wrapper">
+            <svg
+              class="bottle-svg"
+              viewBox="0 0 200 340"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <!-- Bottle Body -->
+              <defs>
+                <clipPath id="waterClip">
+                  <path
+                    d="M65 80 
+                                         C65 55, 75 40, 85 30 
+                                         L85 20 
+                                         C60 18, 50 10, 50 0 
+                                         L150 0 
+                                         C150 10, 140 18, 115 20 
+                                         L115 30 
+                                         C125 40, 135 55, 135 80 
+                                         L135 280 
+                                         C135 310, 110 330, 100 330 
+                                         C90 330, 65 310, 65 280 
+                                         Z"
+                  />
+                </clipPath>
+                <linearGradient id="waterGradient" x1="0" y1="1" x2="0" y2="0">
+                  <stop offset="0%" stop-color="#0ea5e9" />
+                  <stop offset="50%" stop-color="#38bdf8" />
+                  <stop offset="100%" stop-color="#7dd3fc" />
+                </linearGradient>
+                <linearGradient id="glassGradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="rgba(255,255,255,0.25)" />
+                  <stop offset="100%" stop-color="rgba(255,255,255,0.05)" />
+                </linearGradient>
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="4" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <!-- Bottle outline -->
+              <path
+                d="M65 80 
+                                 C65 55, 75 40, 85 30 
+                                 L85 20 
+                                 C60 18, 50 10, 50 0 
+                                 L150 0 
+                                 C150 10, 140 18, 115 20 
+                                 L115 30 
+                                 C125 40, 135 55, 135 80 
+                                 L135 280 
+                                 C135 310, 110 330, 100 330 
+                                 C90 330, 65 310, 65 280 
+                                 Z"
+                fill="url(#glassGradient)"
+                stroke="rgba(255,255,255,0.3)"
+                stroke-width="2.5"
+              />
+
+              <!-- Water fill -->
+              <rect
+                id="waterFill"
+                x="65"
+                y="280"
+                width="70"
+                height="0"
+                fill="url(#waterGradient)"
+                clip-path="url(#waterClip)"
+                filter="url(#glow)"
+                style="transition: height 0.6s cubic-bezier(0.4, 0, 0.2, 1)"
+              />
+
+              <!-- Water surface wave -->
+              <ellipse
+                id="waterSurface"
+                cx="100"
+                cy="280"
+                rx="34"
+                ry="5"
+                fill="rgba(255,255,255,0.5)"
+                clip-path="url(#waterClip)"
+                style="transition: cy 0.6s cubic-bezier(0.4, 0, 0.2, 1)"
+              />
+
+              <!-- Cap -->
+              <rect
+                x="48"
+                y="-8"
+                width="104"
+                height="12"
+                rx="6"
+                fill="rgba(255,255,255,0.15)"
+                stroke="rgba(255,255,255,0.2)"
+                stroke-width="1.5"
+              />
+            </svg>
+
+            <!-- Percentage overlay -->
+            <div class="percentage-display" id="percentageDisplay">0%</div>
+
+            <!-- Celebration particles container -->
+            <div class="particles-container" id="particlesContainer"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Cards -->
+      <section class="stats-section">
+        <div class="stat-card">
+          <i class="fas fa-glass-water"></i>
+          <div class="stat-info">
+            <span class="stat-value" id="glassesDrank">0</span>
+            <span class="stat-label">Glasses Today</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-fire"></i>
+          <div class="stat-info">
+            <span class="stat-value" id="streakCount">0</span>
+            <span class="stat-label">Day Streak</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-droplet"></i>
+          <div class="stat-info">
+            <span class="stat-value" id="mlDrank">0</span>
+            <span class="stat-label">ml / 2000</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Add Buttons -->
+      <section class="quick-add-section">
+        <h3>Quick Add</h3>
+        <div class="quick-add-buttons">
+          <button class="add-btn glass-btn" data-ml="150">
+            <i class="fas fa-mug-hot"></i>
+            <span>150ml</span>
+            <small>Small Cup</small>
+          </button>
+          <button class="add-btn glass-btn" data-ml="250">
+            <i class="fas fa-cup"></i>
+            <span>250ml</span>
+            <small>Medium Glass</small>
+          </button>
+          <button class="add-btn glass-btn" data-ml="500">
+            <i class="fas fa-bottle-water"></i>
+            <span>500ml</span>
+            <small>Water Bottle</small>
+          </button>
+          <button class="add-btn glass-btn" data-ml="750">
+            <i class="fas fa-flask"></i>
+            <span>750ml</span>
+            <small>Large Bottle</small>
+          </button>
+        </div>
+      </section>
+
+      <!-- Custom Add -->
+      <section class="custom-section">
+        <div class="custom-input-group">
+          <input
+            type="number"
+            id="customMlInput"
+            placeholder="Custom ml"
+            min="50"
+            max="2000"
+            step="50"
+            value="200"
+          />
+          <button class="add-custom-btn glass-btn" id="customAddBtn">
+            <i class="fas fa-plus-circle"></i> Add
+          </button>
+        </div>
+      </section>
+
+      <!-- History -->
+      <section class="history-section">
+        <div class="history-header">
+          <h3><i class="fas fa-clock"></i> Today's Log</h3>
+          <button class="clear-btn" id="clearTodayBtn">
+            <i class="fas fa-trash-alt"></i> Clear
+          </button>
+        </div>
+        <div class="history-list" id="historyList">
+          <div class="empty-state">
+            <i class="fas fa-water"></i>
+            <p>No water logged yet today</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Toast Notification -->
+      <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Water added!</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
