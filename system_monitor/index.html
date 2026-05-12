@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SYNAPSE // BROWSER OS MONITOR</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="scanlines"></div>
+    <div class="container glass">
+      <header>
+        <div class="header-dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <h1>// BROWSER_OS : NEURAL_LINK</h1>
+        <p class="status-text" id="connection-type">⟳ INITIALIZING</p>
+      </header>
+
+      <main class="dashboard-grid">
+        <!-- MEMORY CARD -->
+        <section class="card glass">
+          <div class="card-header">
+            <span class="icon">🧠</span>
+            <h2>MEMORY_ALLOC</h2>
+          </div>
+          <div class="gauge-container">
+            <svg class="gauge" viewBox="0 0 120 120">
+              <circle class="gauge-bg" cx="60" cy="60" r="52" />
+              <circle
+                class="gauge-fill"
+                id="memory-circle"
+                cx="60"
+                cy="60"
+                r="52"
+              />
+            </svg>
+            <div class="gauge-value" id="memory-percent">--%</div>
+          </div>
+          <div class="stats-row">
+            <span>USED: <strong id="used-js-heap">-- MB</strong></span>
+            <span>LIMIT: <strong id="total-js-heap">-- MB</strong></span>
+          </div>
+          <div class="footer-note" id="memory-api-status">
+            🔴 performance.memory not available
+          </div>
+        </section>
+
+        <!-- BATTERY CARD -->
+        <section class="card glass">
+          <div class="card-header">
+            <span class="icon">🔋</span>
+            <h2>POWER_CELL</h2>
+          </div>
+          <div class="battery-visual">
+            <div class="battery-body">
+              <div
+                class="battery-fill"
+                id="battery-fill"
+                style="height: 0%"
+              ></div>
+              <div class="battery-lightning" id="charging-icon">⚡</div>
+            </div>
+            <div class="battery-cap"></div>
+          </div>
+          <div class="battery-text">
+            <span id="battery-percent">--%</span>
+            <span id="battery-status">UNKNOWN</span>
+          </div>
+          <div class="footer-note" id="battery-api-status">
+            🔴 Battery API unavailable
+          </div>
+        </section>
+
+        <!-- NETWORK CARD -->
+        <section class="card glass">
+          <div class="card-header">
+            <span class="icon">📶</span>
+            <h2>NEURAL_LINK</h2>
+          </div>
+          <div class="network-graphic">
+            <div class="signal-bars" id="signal-bars">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </div>
+          <div class="network-details">
+            <div class="detail-row">
+              <span>TYPE:</span>
+              <strong id="conn-type">--</strong>
+            </div>
+            <div class="detail-row">
+              <span>DOWNLINK:</span>
+              <strong id="downlink-speed">-- Mbps</strong>
+            </div>
+            <div class="detail-row">
+              <span>RTT:</span>
+              <strong id="rtt-value">-- ms</strong>
+            </div>
+          </div>
+          <div class="footer-note" id="network-api-status">
+            🔴 Network Info API unavailable
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <span id="live-timestamp">[ SYSTEM TIME : --:--:-- ]</span>
+        <span class="blink">█</span>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
