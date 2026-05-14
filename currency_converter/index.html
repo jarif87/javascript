@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Currency Converter</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1><i class="fas fa-exchange-alt"></i> Currency Converter</h1>
+        <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+      </header>
+
+      <div class="converter">
+        <!-- From -->
+        <div class="card">
+          <label>From</label>
+          <div class="input-group">
+            <select id="from-currency"></select>
+            <input type="number" id="from-amount" value="1" />
+          </div>
+        </div>
+
+        <button id="swap" class="swap-btn">
+          <i class="fas fa-exchange-alt"></i>
+        </button>
+
+        <!-- To -->
+        <div class="card">
+          <label>To</label>
+          <div class="input-group">
+            <select id="to-currency"></select>
+            <input type="number" id="to-amount" readonly />
+          </div>
+        </div>
+      </div>
+
+      <div class="result">
+        <p id="rate-info"></p>
+        <button id="add-favorite">★ Add to Favorites</button>
+      </div>
+
+      <!-- Favorites Section -->
+      <div class="favorites">
+        <h3>Your Favorites</h3>
+        <div id="favorites-list" class="favorites-list"></div>
+      </div>
+
+      <!-- Popular Currencies -->
+      <div class="popular">
+        <h3>Popular Currencies</h3>
+        <div class="popular-btns" id="popular-btns"></div>
+      </div>
+
+      <!-- Chart -->
+      <div class="chart-container">
+        <h3>7-Day Trend</h3>
+        <canvas id="rateChart"></canvas>
+      </div>
+
+      <footer>
+        <small>
+          Data from
+          <a href="https://github.com/fawazahmed0/exchange-api" target="_blank"
+            >Free Currency API</a
+          >
+        </small>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
