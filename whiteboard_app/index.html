@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pro Whiteboard - Cyan Edition</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Top Navigation Bar -->
+      <nav class="top-nav">
+        <div class="nav-brand">
+          <i class="fas fa-paint-brush"></i>
+          <span>Canvas Pro</span>
+        </div>
+        <div class="nav-actions">
+          <button class="nav-btn" id="newFileBtn" title="New File">
+            <i class="fas fa-file"></i> New
+          </button>
+          <button class="nav-btn" id="openFileBtn" title="Open File">
+            <i class="fas fa-folder-open"></i> Open
+          </button>
+          <button class="nav-btn" id="saveProjectBtn" title="Save Project">
+            <i class="fas fa-save"></i> Save
+          </button>
+          <button class="nav-btn" id="exportBtn" title="Export">
+            <i class="fas fa-download"></i> Export
+          </button>
+          <div class="export-dropdown" id="exportDropdown">
+            <button class="dropdown-item" data-format="png">PNG Image</button>
+            <button class="dropdown-item" data-format="jpg">JPEG Image</button>
+            <button class="dropdown-item" data-format="svg">SVG Vector</button>
+            <button class="dropdown-item" data-format="pdf">
+              PDF Document
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="workspace">
+        <!-- Left Sidebar - Tool Panel -->
+        <aside class="sidebar left-sidebar">
+          <div class="sidebar-section">
+            <h3><i class="fas fa-tools"></i> Tools</h3>
+            <div class="tool-grid">
+              <button class="tool-btn active" data-tool="pen" title="Pen (P)">
+                <i class="fas fa-pen"></i>
+                <span>Pen</span>
+              </button>
+              <button class="tool-btn" data-tool="pencil" title="Pencil">
+                <i class="fas fa-pencil-alt"></i>
+                <span>Pencil</span>
+              </button>
+              <button class="tool-btn" data-tool="brush" title="Brush">
+                <i class="fas fa-paint-brush"></i>
+                <span>Brush</span>
+              </button>
+              <button class="tool-btn" data-tool="spray" title="Spray Can">
+                <i class="fas fa-spray-can"></i>
+                <span>Spray</span>
+              </button>
+              <button class="tool-btn" data-tool="eraser" title="Eraser (E)">
+                <i class="fas fa-eraser"></i>
+                <span>Eraser</span>
+              </button>
+              <button class="tool-btn" data-tool="line" title="Line (L)">
+                <i class="fas fa-grip-lines"></i>
+                <span>Line</span>
+              </button>
+              <button
+                class="tool-btn"
+                data-tool="rectangle"
+                title="Rectangle (R)"
+              >
+                <i class="far fa-square"></i>
+                <span>Rectangle</span>
+              </button>
+              <button class="tool-btn" data-tool="circle" title="Circle (C)">
+                <i class="far fa-circle"></i>
+                <span>Circle</span>
+              </button>
+              <button class="tool-btn" data-tool="triangle" title="Triangle">
+                <i class="fas fa-play"></i>
+                <span>Triangle</span>
+              </button>
+              <button class="tool-btn" data-tool="star" title="Star">
+                <i class="far fa-star"></i>
+                <span>Star</span>
+              </button>
+              <button class="tool-btn" data-tool="text" title="Text (T)">
+                <i class="fas fa-font"></i>
+                <span>Text</span>
+              </button>
+              <button
+                class="tool-btn"
+                data-tool="eyedropper"
+                title="Color Picker"
+              >
+                <i class="fas fa-eye-dropper"></i>
+                <span>Picker</span>
+              </button>
+              <button class="tool-btn" data-tool="fill" title="Fill Bucket">
+                <i class="fas fa-fill-drip"></i>
+                <span>Fill</span>
+              </button>
+              <button class="tool-btn" data-tool="gradient" title="Gradient">
+                <i class="fas fa-adjust"></i>
+                <span>Gradient</span>
+              </button>
+              <button class="tool-btn" data-tool="stamp" title="Stamp">
+                <i class="fas fa-stamp"></i>
+                <span>Stamp</span>
+              </button>
+              <button class="tool-btn" data-tool="blur" title="Blur Tool">
+                <i class="fas fa-cloud"></i>
+                <span>Blur</span>
+              </button>
+              <button class="tool-btn" data-tool="clone" title="Clone Stamp">
+                <i class="fas fa-clone"></i>
+                <span>Clone</span>
+              </button>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Canvas Area -->
+        <main class="canvas-area">
+          <div class="canvas-toolbar">
+            <div class="zoom-controls">
+              <button id="zoomOutBtn">
+                <i class="fas fa-search-minus"></i>
+              </button>
+              <span id="zoomLevel">100%</span>
+              <button id="zoomInBtn"><i class="fas fa-search-plus"></i></button>
+              <button id="fitToScreenBtn"><i class="fas fa-expand"></i></button>
+            </div>
+            <div class="canvas-info">
+              <span id="canvasSize">1920 × 1080</span>
+            </div>
+          </div>
+          <div class="canvas-container" id="canvasContainer">
+            <canvas id="mainCanvas"></canvas>
+            <canvas id="tempCanvas"></canvas>
+            <canvas id="selectionCanvas"></canvas>
+            <div
+              id="textInput"
+              class="text-input"
+              contenteditable="true"
+              style="display: none"
+            ></div>
+            <div class="canvas-overlay">
+              <div
+                class="selection-box"
+                id="selectionBox"
+                style="display: none"
+              ></div>
+              <div class="crop-overlay" id="cropOverlay" style="display: none">
+                <div class="crop-area" id="cropArea">
+                  <div class="crop-handle top-left"></div>
+                  <div class="crop-handle top-right"></div>
+                  <div class="crop-handle bottom-left"></div>
+                  <div class="crop-handle bottom-right"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <!-- Right Sidebar - Properties Panel -->
+        <aside class="sidebar right-sidebar">
+          <!-- Color Panel -->
+          <div class="sidebar-section">
+            <h3><i class="fas fa-palette"></i> Colors</h3>
+            <div class="color-picker-container">
+              <input type="color" id="colorPicker" value="#000000" />
+              <div class="color-presets">
+                <button
+                  class="color-preset"
+                  style="background: #000000"
+                  data-color="#000000"
+                ></button>
+                <button
+                  class="color-preset"
+                  style="background: #ffffff; border: 1px solid #ccc"
+                  data-color="#ffffff"
+                ></button>
+                <button
+                  class="color-preset"
+                  style="background: #ff0000"
+                  data-color="#ff0000"
+                ></button>
+                <button
+                  class="color-preset"
+                  style="background: #00ff00"
+                  data-color="#00ff00"
+                ></button>
+                <button
+                  class="color-preset"
+                  style="background: #0000ff"
+                  data-color="#0000ff"
+                ></button>
+                <button
+                  class="color-preset"
+                  style="background: #ffff00"
+                  data-color="#ffff00"
+                ></button>
+                <button
+                  class="color-preset"
+                  style="background: #ff00ff"
+                  data-color="#ff00ff"
+                ></button>
+                <button
+                  class="color-preset"
+                  style="background: #00ffff"
+                  data-color="#00ffff"
+                ></button>
+              </div>
+              <button class="btn-secondary" id="randomColorBtn">
+                <i class="fas fa-random"></i> Random Color
+              </button>
+            </div>
+          </div>
+
+          <!-- Brush Settings -->
+          <div class="sidebar-section">
+            <h3><i class="fas fa-sliders-h"></i> Brush</h3>
+            <div class="setting-group">
+              <label>Size: <span id="sizeValue">3px</span></label>
+              <input type="range" id="brushSize" min="1" max="100" value="3" />
+            </div>
+            <div class="setting-group">
+              <label>Opacity: <span id="opacityValue">100%</span></label>
+              <input type="range" id="opacity" min="1" max="100" value="100" />
+            </div>
+            <div class="setting-group">
+              <label>Hardness: <span id="hardnessValue">100%</span></label>
+              <input type="range" id="hardness" min="0" max="100" value="100" />
+            </div>
+            <div class="setting-group">
+              <label>Spacing: <span id="spacingValue">1</span></label>
+              <input type="range" id="spacing" min="1" max="50" value="1" />
+            </div>
+            <div class="setting-group">
+              <label>Angle: <span id="angleValue">0°</span></label>
+              <input type="range" id="angle" min="0" max="360" value="0" />
+            </div>
+          </div>
+
+          <!-- Shape Settings -->
+          <div class="sidebar-section">
+            <h3><i class="fas fa-shapes"></i> Shapes</h3>
+            <div class="setting-group">
+              <label>Fill Style</label>
+              <select id="fillStyle">
+                <option value="stroke">Outline</option>
+                <option value="fill">Filled</option>
+                <option value="both">Outline & Fill</option>
+              </select>
+            </div>
+            <div class="setting-group">
+              <label>Line Style</label>
+              <select id="lineStyle">
+                <option value="solid">Solid</option>
+                <option value="dashed">Dashed</option>
+                <option value="dotted">Dotted</option>
+              </select>
+            </div>
+            <div class="setting-group">
+              <label>Corner Radius</label>
+              <input
+                type="range"
+                id="cornerRadius"
+                min="0"
+                max="50"
+                value="0"
+              />
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Bottom Status Bar -->
+      <footer class="status-bar">
+        <div class="status-left">
+          <span id="cursorPos">X: 0, Y: 0</span>
+          <span class="separator">|</span>
+          <span id="toolStatus">Tool: Pen</span>
+        </div>
+        <div class="status-center">
+          <span id="layerInfo">Layer 1 of 1</span>
+        </div>
+        <div class="status-right">
+          <span id="memoryUsage">Memory: 0 MB</span>
+          <span class="separator">|</span>
+          <span id="performanceIndicator">
+            <i class="fas fa-circle" style="color: #00cc66; font-size: 8px"></i>
+            60 FPS
+          </span>
+        </div>
+      </footer>
+
+      <!-- Layers Panel (Floating) -->
+      <div class="floating-panel layers-panel" id="layersPanel">
+        <div class="panel-header">
+          <h3><i class="fas fa-layer-group"></i> Layers</h3>
+          <button class="close-btn" id="closeLayersBtn">×</button>
+        </div>
+        <div class="panel-body">
+          <div class="layer-controls">
+            <button id="addLayerBtn" title="Add Layer">
+              <i class="fas fa-plus"></i>
+            </button>
+            <button id="duplicateLayerBtn" title="Duplicate Layer">
+              <i class="fas fa-copy"></i>
+            </button>
+            <button id="mergeDownBtn" title="Merge Down">
+              <i class="fas fa-object-group"></i>
+            </button>
+            <button id="deleteLayerBtn" title="Delete Layer">
+              <i class="fas fa-trash"></i>
+            </button>
+            <button id="moveLayerUpBtn" title="Move Up">
+              <i class="fas fa-arrow-up"></i>
+            </button>
+            <button id="moveLayerDownBtn" title="Move Down">
+              <i class="fas fa-arrow-down"></i>
+            </button>
+          </div>
+          <div id="layersList" class="layers-list"></div>
+        </div>
+      </div>
+
+      <!-- Filters Panel (Floating) -->
+      <div
+        class="floating-panel filters-panel"
+        id="filtersPanel"
+        style="display: none"
+      >
+        <div class="panel-header">
+          <h3><i class="fas fa-magic"></i> Filters</h3>
+          <button class="close-btn" id="closeFiltersBtn">×</button>
+        </div>
+        <div class="panel-body">
+          <div class="filter-options">
+            <button class="filter-btn" data-filter="grayscale">
+              Grayscale
+            </button>
+            <button class="filter-btn" data-filter="sepia">Sepia</button>
+            <button class="filter-btn" data-filter="invert">Invert</button>
+            <button class="filter-btn" data-filter="blur">Blur</button>
+            <button class="filter-btn" data-filter="brightness">
+              Brightness
+            </button>
+            <button class="filter-btn" data-filter="contrast">Contrast</button>
+            <button class="filter-btn" data-filter="saturate">Saturate</button>
+            <button class="filter-btn" data-filter="hue-rotate">
+              Hue Rotate
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Minimap -->
+      <div class="minimap" id="minimap">
+        <canvas id="minimapCanvas"></canvas>
+        <div class="minimap-viewport" id="minimapViewport"></div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
