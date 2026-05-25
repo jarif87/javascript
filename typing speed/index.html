@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>⚡ ZenType - Advanced Typing Speed Test</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>⌨️ ZenType Speed Test</h1>
+      <p class="subtitle">Test your typing speed & accuracy</p>
+
+      <!-- Stats Dashboard -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">⏱️ TIME</div>
+          <div class="stat-value">
+            <span id="time">30</span><span class="unit">s</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">⚡ WPM</div>
+          <div class="stat-value"><span id="wpm">0</span></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">🎯 ACCURACY</div>
+          <div class="stat-value">
+            <span id="accuracy">100</span><span class="unit">%</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">📊 RAW WPM</div>
+          <div class="stat-value"><span id="rawWpm">0</span></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">⌨️ CHAR/SEC</div>
+          <div class="stat-value"><span id="cps">0.00</span></div>
+        </div>
+      </div>
+
+      <!-- Text Display Area -->
+      <div class="text-container">
+        <div id="textDisplay" class="text-display"></div>
+      </div>
+
+      <!-- Visible Input Field -->
+      <div class="input-area">
+        <label>📝 Type here:</label>
+        <input
+          type="text"
+          id="userInput"
+          class="user-input"
+          placeholder="Start typing the text above..."
+          autocomplete="off"
+          autocapitalize="off"
+          spellcheck="false"
+        />
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <button id="restartBtn" class="btn btn-primary">⟳ RESTART</button>
+        <button id="nextBtn" class="btn btn-secondary">📖 NEXT PASSAGE</button>
+        <div class="mode-selector">
+          <button id="mode30" class="mode-btn active">30s</button>
+          <button id="mode60" class="mode-btn">60s</button>
+          <button id="modeInf" class="mode-btn">∞</button>
+        </div>
+        <button id="themeBtn" class="btn theme-btn">🌙 DARK</button>
+      </div>
+
+      <!-- Status Message -->
+      <div class="status" id="status">
+        ✅ Ready! Start typing in the box below
+      </div>
+
+      <!-- Keyboard Shortcuts Hint -->
+      <div class="keyboard-hint">
+        💡 Tip: Press Ctrl+K to restart | Ctrl+N for next passage
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
