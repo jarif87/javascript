@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mood Palette | Daily Mood Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <div class="logo">
+          <span class="logo-icon">🎨</span>
+          <h1>Mood Palette</h1>
+        </div>
+        <p class="tagline">capture your feelings, paint your week</p>
+      </header>
+
+      <!-- Mood Selector Section -->
+      <div class="mood-section">
+        <h3>how are you feeling right now?</h3>
+        <div class="mood-grid" id="moodGrid">
+          <div
+            class="mood-card"
+            data-mood="ecstatic"
+            data-color="#FFD93D"
+            data-emoj="🤩"
+          >
+            <span class="mood-emoji">🤩</span>
+            <span class="mood-name">Ecstatic</span>
+          </div>
+          <div
+            class="mood-card"
+            data-mood="happy"
+            data-color="#6BCB77"
+            data-emoj="😊"
+          >
+            <span class="mood-emoji">😊</span>
+            <span class="mood-name">Happy</span>
+          </div>
+          <div
+            class="mood-card"
+            data-mood="calm"
+            data-color="#4D96FF"
+            data-emoj="😌"
+          >
+            <span class="mood-emoji">😌</span>
+            <span class="mood-name">Calm</span>
+          </div>
+          <div
+            class="mood-card"
+            data-mood="meh"
+            data-color="#9B9B9B"
+            data-emoj="😐"
+          >
+            <span class="mood-emoji">😐</span>
+            <span class="mood-name">Meh</span>
+          </div>
+          <div
+            class="mood-card"
+            data-mood="sad"
+            data-color="#6C5B7B"
+            data-emoj="😔"
+          >
+            <span class="mood-emoji">😔</span>
+            <span class="mood-name">Sad</span>
+          </div>
+          <div
+            class="mood-card"
+            data-mood="energetic"
+            data-color="#FF6B6B"
+            data-emoj="⚡"
+          >
+            <span class="mood-emoji">⚡</span>
+            <span class="mood-name">Energetic</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Note Input Section -->
+      <div class="note-section">
+        <textarea
+          id="moodNote"
+          placeholder="write a short note about your mood... (optional)"
+          maxlength="200"
+        ></textarea>
+        <button id="saveMoodBtn" class="save-btn">💾 save mood entry</button>
+      </div>
+
+      <!-- History Section -->
+      <div class="history-section">
+        <div class="history-header">
+          <h3>📅 mood journal</h3>
+          <button id="clearHistoryBtn" class="clear-btn">clear all</button>
+        </div>
+        <div id="historyList" class="history-list">
+          <div class="empty-history">
+            <span>🌸</span>
+            <p>no entries yet. select a mood and save your first memory!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Section -->
+      <div class="stats-section">
+        <h3>📊 weekly snapshot</h3>
+        <div class="stats-grid" id="statsGrid">
+          <div class="stat-card">
+            <span class="stat-value" id="totalEntries">0</span>
+            <span class="stat-label">total entries</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="topMood">—</span>
+            <span class="stat-label">top mood</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value" id="recentMood">—</span>
+            <span class="stat-label">latest vibe</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
