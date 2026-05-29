@@ -97,7 +97,7 @@ for (let i = 0; i < newTodo.length; i++) {
 // console.log("This would log:", sum);
 
 // const num1 = [1, 2, 3, 4, 5];
-const num2 = [6, 7, 8, 9, 10];
+// const num2 = [6, 7, 8, 9, 10];
 // const [first_value1, second_value1, ...rest_values1] = [1, 2, 3, 4, 5];
 // const [first_value2, second_value2, ...rest_values2] = [6, 7, 8, 9, 10];
 
@@ -112,14 +112,37 @@ const num2 = [6, 7, 8, 9, 10];
 
 let num1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-for (let i = 0; i < num1.length; i++) {
-  console.log("This would log:", num1[i]);
-  if (num1[i] === 5) {
-    console.log("This would log: Skipping number 5");
-    continue;
-  }
-  if (num1[i] === 8) {
-    console.log("This would log: Stopping the loop at number 8");
-    break;
-  }
+// for (let i = 0; i < num1.length; i++) {
+//   console.log("This would log:", num1[i]);
+//   if (num1[i] === 5) {
+//     console.log("This would log: Skipping number 5");
+//     continue;
+//   }
+//   if (num1[i] === 8) {
+//     console.log("This would log: Stopping the loop at number 8");
+//     break;
+//   }
+// }
+
+// let num2 = 10;
+
+// while (num2 <= 20) {
+//   console.log("This would log:", num2);
+//   num2++;
+//   if (num2 === 15) {
+//     console.log("This would log: Skipping number 15");
+//     continue;
+//   }
+//   if (num2 === 18) {
+//     console.log("This would log: Stopping the loop at number 18");
+//     break;
+//   }
+// }
+
+let num3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let num4 = [];
+for (let i = 0; i < num3.length; i++) {
+  num4.push(num3[i] * 2);
+  //   num4.push(num3[i] * num3[i]);
 }
+console.log("This would log:", num4);
