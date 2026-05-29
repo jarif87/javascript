@@ -89,9 +89,37 @@ for (let i = 0; i < newTodo.length; i++) {
 }
 */
 
-let num = [1, 2, 3, 4, 5];
-let sum = 0;
-for (let i = 0; i < num.length; i++) {
-  sum += num[i];
+// let num = [1, 2, 3, 4, 5];
+// let sum = 0;
+// for (let i = 0; i < num.length; i++) {
+//   sum += num[i];
+// }
+// console.log("This would log:", sum);
+
+// const num1 = [1, 2, 3, 4, 5];
+const num2 = [6, 7, 8, 9, 10];
+// const [first_value1, second_value1, ...rest_values1] = [1, 2, 3, 4, 5];
+// const [first_value2, second_value2, ...rest_values2] = [6, 7, 8, 9, 10];
+
+// console.log("This would log:", first_value1, second_value1, rest_values1);
+// console.log("This would log:", first_value2, second_value2, rest_values2);
+// console.log("This would log first value1 :", first_value1);
+// console.log("This would log first value2 :", first_value2);
+// console.log("This would log second value1 :", second_value1);
+// console.log("This would log second value2 :", second_value2);
+// console.log("This would log rest values1 :", rest_values1);
+// console.log("This would log rest values2 :", rest_values2);
+
+let num1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+for (let i = 0; i < num1.length; i++) {
+  console.log("This would log:", num1[i]);
+  if (num1[i] === 5) {
+    console.log("This would log: Skipping number 5");
+    continue;
+  }
+  if (num1[i] === 8) {
+    console.log("This would log: Stopping the loop at number 8");
+    break;
+  }
 }
-console.log("This would log:", sum);
