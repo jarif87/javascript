@@ -55,6 +55,7 @@ a = [
 //   console.log("This would log:", randomNumber);
 // }
 
+/*
 let todoList = [
   { id: 1, title: "Buy groceries", completed: false },
   { id: 2, title: "Clean the house", completed: true },
@@ -86,3 +87,11 @@ for (let i = 0; i < newTodo.length; i++) {
   const todo = newTodo[i];
   console.log("This would log:", `Todo: ${todo}`);
 }
+*/
+
+let num = [1, 2, 3, 4, 5];
+let sum = 0;
+for (let i = 0; i < num.length; i++) {
+  sum += num[i];
+}
+console.log("This would log:", sum);
