@@ -113,3 +113,53 @@ const oneLine = () => {
 console.log(oneLine());
 
 */
+
+/*
+
+const buttonElement = document.querySelector(".btn");
+
+const eventListener = () => {
+  console.log("This would log:", "Button clicked!");
+};
+
+buttonElement.addEventListener("click", eventListener);
+
+buttonElement.removeEventListener("click", eventListener);
+
+buttonElement.addEventListener("click", () => {
+  console.log("This would log:", "hello world!");
+});
+
+*/
+
+// [1, -3, 5, 6, -2, 0]
+//   .filter((value, index) => {
+//     return value > 0;
+//   })
+//   .forEach((num) => console.log(num));
+
+// [1, -3, 5, 6, -2, 0].filter((value, index) => {
+//   console.log(value);
+//   console.log(index);
+//   return value > 0;
+// });
+
+// const newArray = [1, 2, -3, 4, 5].map((value, index) => {
+//   console.log("the value is:", value);
+//   console.log("the index is:", index);
+//   return value * 2;
+// });
+
+// console.log("the new array is:", newArray);
+
+//Closure Example
+
+function outerFunction(outerVariable) {
+  return function innerFunction(innerVariable) {
+    console.log("the outer variable is:", outerVariable);
+    console.log("the inner variable is:", innerVariable);
+  };
+}
+
+const newFunction = outerFunction("outside");
+newFunction("inside");
