@@ -39,3 +39,16 @@
 // returnValue(function () {
 //   console.log("This would log:", "Hello, World!");
 // });
+
+// setTimeout(function () {
+//   console.log("This would log:", "Hello, World!");
+//   console.log("This would log:", "Hello, World2!");
+// }, 5000); //5000 mili seconds = 5 second
+
+// console.log("This would log:", "Hello, World3!");
+
+// setInterval(function () {
+//   console.log("This would log:", "Hello, World!");
+// }, 1000); //1000 mili seconds = 1 second
+
+// console.log("This would log:", "Hello, World4!");
