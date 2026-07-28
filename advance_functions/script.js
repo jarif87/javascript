@@ -52,3 +52,64 @@
 // }, 1000); //1000 mili seconds = 1 second
 
 // console.log("This would log:", "Hello, World4!");
+
+// [
+//   "make",
+//   "a",
+//   "function",
+//   "that",
+//   "takes",
+//   "an",
+//   "array",
+//   "of",
+//   "numbers",
+//   "as",
+//   "input",
+//   "and",
+//   "returns",
+//   "the",
+//   "sum",
+//   "of",
+//   "all",
+//   "the",
+//   "numbers",
+// ].forEach(function (word, index) {
+//   if (word === "array") {
+//     console.log("This would log:", "Found the word 'array' at index:", index);
+//     return;
+//   }
+//   //   console.log("This would log:", word);
+//   //   console.log("This would log:", index);
+// });
+
+/*
+const arrowFunctions = () => {
+  console.log("This would log:", "Hello, World!");
+  console.log("This would log:", "Hello, World2!");
+  console.log("This would log:", "Hello, World3!");
+};
+
+arrowFunctions();
+
+const arrowFunctions2 = (name, age) => {
+  console.log(
+    "This would log:",
+    "Hello, " + name + "! You are " + age + " years old.",
+  );
+};
+
+arrowFunctions2("Alice", 30);
+
+const oneParameter = (param1) => {
+  console.log("This would log:", "The parameter is:", param1);
+};
+
+oneParameter("Hello, World!");
+
+const oneLine = () => {
+  return 4 + 9;
+};
+
+console.log(oneLine());
+
+*/
