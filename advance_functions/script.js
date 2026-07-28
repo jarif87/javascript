@@ -18,11 +18,24 @@
 
 // function_2("Bob");
 
-const object1 = {
-  Number: 2,
-  fun: function greet() {
-    console.log("Hello, World!");
-  },
-};
+// const object1 = {
+//   Number: 2,
+//   fun: function greet() {
+//     console.log("Hello, World!");
+//   },
+// };
 
-object1.fun();
+// object1.fun();
+
+// function display(parameter) {
+//   console.log("This would log:", parameter);
+// }
+// display(100);
+
+// function returnValue(parameter) {
+//   parameter();
+// }
+
+// returnValue(function () {
+//   console.log("This would log:", "Hello, World!");
+// });
