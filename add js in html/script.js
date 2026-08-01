@@ -167,6 +167,7 @@ document.getElementById("output-display").innerText += //display subtraction in 
   typeof subtraction;
 */
 
+/*
 // Take input from the user and display the result in the output-display div
 // Task: Get user input, convert it to a number, and display it in the output-display div
 
@@ -184,3 +185,5 @@ document.getElementById("output-display").innerText +=
 let additionResult = userInputNumber + userInputNumber2;
 document.getElementById("output-display").innerText +=
   "\n" + "Addition result is: " + additionResult;
+
+  */
