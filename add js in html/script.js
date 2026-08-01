@@ -143,6 +143,7 @@ number1 -= 3; // Output: 12.0122345
 console.log("Updated number1 is: " + number1); // Output: 12.0122345
 */
 
+/*
 //Task: Demonstrate addition and subtraction of two numbers and display the results in the output-display div
 const number1 = 10.0122345;
 const number2 = 1234.56789;
@@ -164,3 +165,22 @@ document.getElementById("output-display").innerText += //display subtraction in 
   "\n" +
   "Type of subtraction is: " +
   typeof subtraction;
+*/
+
+// Take input from the user and display the result in the output-display div
+// Task: Get user input, convert it to a number, and display it in the output-display div
+
+let userInput = prompt("Enter a number: "); // Prompt the user to enter a number
+let userInputNumber = Number(userInput);
+document.getElementById("output-display").innerText +=
+  "\n" + "You entered: " + userInputNumber;
+
+let userInput2 = prompt("Enter another number: "); // Prompt the user to enter another number
+let userInputNumber2 = Number(userInput2);
+document.getElementById("output-display").innerText +=
+  "\n" + "You entered: " + userInputNumber2;
+
+// Perform addition and display the result in the output-display div
+let additionResult = userInputNumber + userInputNumber2;
+document.getElementById("output-display").innerText +=
+  "\n" + "Addition result is: " + additionResult;
