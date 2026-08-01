@@ -93,6 +93,8 @@ document.getElementById("output-display-2").innerText +=
 
   */
 
+/*
+
 //Task: Get user name and last name, display full name, length of full name, and uppercase version of full name in the output-display div
 
 //get user name and display it in the output-display div
@@ -119,3 +121,46 @@ document.getElementById("output-display").innerText +=
 let fullNameUpperCase = fullName.toUpperCase();
 document.getElementById("output-display").innerText +=
   "\n" + "Your full name in uppercase is: " + fullNameUpperCase;
+
+*/
+
+/*
+
+//Task: Demonstrate the difference between post-decrement and pre-decrement operators
+let a = 10;
+let b = a--; // Post-decrement operator
+console.log(b); // Output: 10
+let c = --a;
+console.log(c); // Output: 8
+
+let e = ++a; // Pre-increment operator
+console.log(e); // Output: 9
+
+const number1 = 10.0122345; // Output: 10.0122345
+number1 += 5; // Output: 15.0122345
+console.log("Updated number1 is: " + number1); // Output: 15.0122345
+number1 -= 3; // Output: 12.0122345
+console.log("Updated number1 is: " + number1); // Output: 12.0122345
+*/
+
+//Task: Demonstrate addition and subtraction of two numbers and display the results in the output-display div
+const number1 = 10.0122345;
+const number2 = 1234.56789;
+const sum = number1 + number2;
+console.log("Sum is: " + sum);
+console.log(typeof sum); // Output: number
+
+document.getElementById("output-display").innerText +=
+  "\n" + "Sum is: " + sum + "\n" + "Type of sum is: " + typeof sum;
+
+const subtraction = number2 - number1; // display subtraction with Console.log and display in the output-display div
+console.log("Subtraction is: " + subtraction);
+console.log(typeof subtraction); // Output: number
+
+document.getElementById("output-display").innerText += //display subtraction in the output-display div
+  "\n" +
+  "Subtraction is: " +
+  subtraction +
+  "\n" +
+  "Type of subtraction is: " +
+  typeof subtraction;
