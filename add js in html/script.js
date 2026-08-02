@@ -187,3 +187,24 @@ document.getElementById("output-display").innerText +=
   "\n" + "Addition result is: " + additionResult;
 
   */
+
+//area of various shapes
+//area of rectangle
+let length = parseFloat(prompt("Enter the length of the rectangle: "));
+let width = parseFloat(prompt("Enter the width of the rectangle: "));
+let areaRectangle = length * width;
+document.getElementById("output-display").innerText +=
+  "\n" + "Area of rectangle is: " + areaRectangle;
+
+//area of triangle
+let base = parseFloat(prompt("Enter the base of the triangle: "));
+let height = parseFloat(prompt("Enter the height of the triangle: "));
+let areaTriangle = 0.5 * base * height;
+document.getElementById("output-triangle").innerText +=
+  "\n" + "Area of triangle is: " + areaTriangle;
+
+//area of circle
+let radius = parseFloat(prompt("Enter the radius of the circle: "));
+let areaCircle = Math.PI * radius * radius;
+document.getElementById("output-circle").innerText +=
+  "\n" + "Area of circle is: " + areaCircle.toFixed(2);
