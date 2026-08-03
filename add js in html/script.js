@@ -188,6 +188,7 @@ document.getElementById("output-display").innerText +=
 
   */
 
+/*
 //area of various shapes
 //area of rectangle
 let length = parseFloat(prompt("Enter the length of the rectangle: "));
@@ -208,3 +209,19 @@ let radius = parseFloat(prompt("Enter the radius of the circle: "));
 let areaCircle = Math.PI * radius * radius;
 document.getElementById("output-circle").innerText +=
   "\n" + "Area of circle is: " + areaCircle.toFixed(2);
+*/
+
+/*
+//Task Farenheit to celcious
+
+let farenheight = parseInt(prompt("Enter Farenheight: "));
+let cels = ((farenheight - 32) * 5) / 9;
+document.getElementById("output-display").innerText +=
+  "\n" + "Celsius is: " + cels.toFixed(2);
+
+  */
+//Task Celcious to Farenheit
+const celsius = parseInt(prompt("Enter Celsius: "));
+const faren = (celsius * 9) / 5 + 32;
+document.getElementById("output-display").innerText +=
+  "\n" + "Farenheit is: " + faren.toFixed(2);
