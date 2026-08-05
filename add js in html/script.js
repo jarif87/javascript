@@ -228,7 +228,7 @@ const faren = (celsius * 9) / 5 + 32;
 document.getElementById("output-display").innerText +=
   "\n" + "Farenheit is: " + faren.toFixed(2);
 */
-
+/*
 //Task relational and logical operators
 let a = parseInt(prompt("Enter first number: "));
 let b = parseInt(prompt("Enter second number: "));
@@ -241,4 +241,24 @@ if (a > b) {
 } else {
   document.getElementById("output-display").innerText +=
     "\n" + a + " is equal to " + b; // Display the result in the output-display div
+}
+*/
+//Task logical operators
+let a = parseInt(prompt("Enter first number: "));
+let b = parseInt(prompt("Enter second number: "));
+if (a > 0 && b > 0) {
+  document.getElementById("output-display").innerText +=
+    "\n" + a + " and " + b + " are both positive numbers"; // Display the result in the output-display div
+} else if (a < 0 && b < 0) {
+  document.getElementById("output-display").innerText +=
+    "\n" + a + " and " + b + " are both negative numbers"; // Display the result in the output-display div
+} else if (a > 0 || b > 0) {
+  document.getElementById("output-display").innerText +=
+    "\n" + a + " or " + b + " is a positive number"; // Display the result in the output-display div
+} else if (a < 0 || b < 0) {
+  document.getElementById("output-display").innerText +=
+    "\n" + a + " or " + b + " is a negative number"; // Display the result in the output-display div
+} else {
+  document.getElementById("output-display").innerText +=
+    "\n" + a + " and " + b + " are both zero"; // Display the result in the output-display div
 }
