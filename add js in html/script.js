@@ -243,6 +243,8 @@ if (a > b) {
     "\n" + a + " is equal to " + b; // Display the result in the output-display div
 }
 */
+
+/*
 //Task logical operators
 let a = parseInt(prompt("Enter first number: "));
 let b = parseInt(prompt("Enter second number: "));
@@ -261,4 +263,18 @@ if (a > 0 && b > 0) {
 } else {
   document.getElementById("output-display").innerText +=
     "\n" + a + " and " + b + " are both zero"; // Display the result in the output-display div
+}
+    */
+
+// Task: if-else statement to check if a number is even or odd
+let a = parseInt(prompt("Enter a number: "));
+if (a % 2 === 0) {
+  document.getElementById("output-display").innerText +=
+    "\n" + a + " is an even number"; // Display the result in the output-display div
+} else if (a % 2 !== 0) {
+  document.getElementById("output-display").innerText +=
+    "\n" + a + " is an odd number"; // Display the result in the output-display div
+} else {
+  document.getElementById("output-display").innerText +=
+    "\n" + a + " is not a valid number"; // Display the result in the output-display div
 }
