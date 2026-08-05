@@ -220,8 +220,25 @@ document.getElementById("output-display").innerText +=
   "\n" + "Celsius is: " + cels.toFixed(2);
 
   */
+
+/*
 //Task Celcious to Farenheit
 const celsius = parseInt(prompt("Enter Celsius: "));
 const faren = (celsius * 9) / 5 + 32;
 document.getElementById("output-display").innerText +=
   "\n" + "Farenheit is: " + faren.toFixed(2);
+*/
+
+//Task relational and logical operators
+let a = parseInt(prompt("Enter first number: "));
+let b = parseInt(prompt("Enter second number: "));
+if (a > b) {
+  document.getElementById("output-display").innerText +=
+    "\n" + a + " is greater than " + b; // Display the result in the output-display div
+} else if (a < b) {
+  document.getElementById("output-display").innerText +=
+    "\n" + a + " is less than " + b; // Display the result in the output-display div
+} else {
+  document.getElementById("output-display").innerText +=
+    "\n" + a + " is equal to " + b; // Display the result in the output-display div
+}
