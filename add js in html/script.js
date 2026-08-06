@@ -314,5 +314,19 @@ if (marks >= 80 && marks <= 100) {
 */
 //Ternary operator
 let x = 10;
-let result = x > 5 ? "x is greater than 5" : "x is less than or equal to 5";
-document.getElementById("output-display").innerText += "\n" + result;
+// let result = x > 5 ? "x is greater than 5" : "x is less than or equal to 5";
+// document.getElementById("output-display").innerText += "\n" + result;
+
+if (x > 5) {
+  document.getElementById("output-display").innerText +=
+    "\n" + "x is greater than 5";
+} else if (x <= 5) {
+  document.getElementById("output-display").innerText +=
+    "\n" + "x is less than or equal to 5";
+} else if (x === 5) {
+  document.getElementById("output-display").innerText +=
+    "\n" + "x is equal to 5";
+} else {
+  document.getElementById("output-display").innerText +=
+    "\n" + "x is not a number";
+}
