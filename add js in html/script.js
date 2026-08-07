@@ -312,7 +312,8 @@ if (marks >= 80 && marks <= 100) {
     "\n" + "Invalid marks entered. Please enter a number between 0 and 100.";
 }
 */
-//Ternary operator
+
+/*
 let x = 10;
 // let result = x > 5 ? "x is greater than 5" : "x is less than or equal to 5";
 // document.getElementById("output-display").innerText += "\n" + result;
@@ -330,3 +331,9 @@ if (x > 5) {
   document.getElementById("output-display").innerText +=
     "\n" + "x is not a number";
 }
+*/
+
+//Ternary operator
+let x = 10;
+let result = x > 5 ? "x is greater than 5" : "x is less than or equal to 5";
+document.getElementById("output-display").innerText += "\n" + result;
