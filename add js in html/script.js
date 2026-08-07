@@ -334,6 +334,75 @@ if (x > 5) {
 */
 
 //Ternary operator
+/*
 let x = 10;
 let result = x > 5 ? "x is greater than 5" : "x is less than or equal to 5";
 document.getElementById("output-display").innerText += "\n" + result;
+*/
+
+/*
+let number = parseInt(prompt("Enter a number: "));
+let numberResult =
+  number > 0 ? "The number is positive" : "The number is not positive";
+document.getElementById("output-display").innerText += "\n" + numberResult;
+*/
+
+/*
+let number = 3;
+let numberResult =
+  number > 0
+    ? "The number is positive"
+    : number < 0
+      ? "The number is negative"
+      : "The number is zero";
+document.getElementById("output-display").innerText += "\n" + numberResult;
+*/
+
+//Switch statement
+
+let digit = parseInt(prompt("Enter a digit (0-9): "));
+switch (digit) {
+  case 0:
+    document.getElementById("output-display").innerText +=
+      "\n" + "You entered zero";
+    break;
+  case 1:
+    document.getElementById("output-display").innerText +=
+      "\n" + "You entered one";
+    break;
+  case 2:
+    document.getElementById("output-display").innerText +=
+      "\n" + "You entered two";
+    break;
+  case 3:
+    document.getElementById("output-display").innerText +=
+      "\n" + "You entered three";
+    break;
+  case 4:
+    document.getElementById("output-display").innerText +=
+      "\n" + "You entered four";
+    break;
+  case 5:
+    document.getElementById("output-display").innerText +=
+      "\n" + "You entered five";
+    break;
+  case 6:
+    document.getElementById("output-display").innerText +=
+      "\n" + "You entered six";
+    break;
+  case 7:
+    document.getElementById("output-display").innerText +=
+      "\n" + "You entered seven";
+    break;
+  case 8:
+    document.getElementById("output-display").innerText +=
+      "\n" + "You entered eight";
+    break;
+  case 9:
+    document.getElementById("output-display").innerText +=
+      "\n" + "You entered nine";
+    break;
+  default:
+    document.getElementById("output-display").innerText +=
+      "\n" + "Invalid digit entered";
+}
