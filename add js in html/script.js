@@ -434,3 +434,28 @@ for (let i = 2; i <= 20; i += 2) {
 document.getElementById("output-display").innerText +=
   "\n" + "-------------------------" + "\n" + "For loop completed";
 */
+
+/*
+// Task: Summation of numbers from 1 to n using for loop
+let n = parseInt(prompt("Enter a number: "));
+let sum = 0;
+
+for (let i = 1; i <= n; i++) {
+  sum += i; // Add the current number to the sum
+  document.getElementById("output-display").innerText +=
+    "\n" + "Current number: " + i + ", Current sum: " + sum;
+}
+document.getElementById("output-display").innerText +=
+  "\n" + "The sum of numbers from 1 to " + n + " is: " + sum;
+*/
+
+let m = parseInt(prompt("Enter a number: "));
+let n = parseInt(prompt("Enter another number: "));
+let sum = 0;
+for (let i = m; i <= n; i++) {
+  sum += i;
+  document.getElementById("output-display").innerText +=
+    "\n" + "Current number: " + i + ", Current sum: " + sum;
+}
+document.getElementById("output-display").innerText +=
+  "\n" + "The sum of numbers from " + m + " to " + n + " is: " + sum;
