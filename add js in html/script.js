@@ -358,6 +358,8 @@ let numberResult =
 document.getElementById("output-display").innerText += "\n" + numberResult;
 */
 
+/*
+
 //Switch statement
 
 let digit = parseInt(prompt("Enter a digit (0-9): "));
@@ -406,3 +408,11 @@ switch (digit) {
     document.getElementById("output-display").innerText +=
       "\n" + "Invalid digit entered";
 }
+*/
+
+// Task : For loop to print numbers from 1 to 10
+for (let i = 1; i <= 10; i++) {
+  document.getElementById("output-display").innerText += "\n" + i;
+}
+document.getElementById("output-display").innerText +=
+  "\n" + "-------------------------" + "\n" + "For loop completed";
