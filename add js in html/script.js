@@ -449,6 +449,8 @@ document.getElementById("output-display").innerText +=
   "\n" + "The sum of numbers from 1 to " + n + " is: " + sum;
 */
 
+/*
+
 let m = parseInt(prompt("Enter a number: "));
 let n = parseInt(prompt("Enter another number: "));
 let sum = 0;
@@ -459,3 +461,44 @@ for (let i = m; i <= n; i++) {
 }
 document.getElementById("output-display").innerText +=
   "\n" + "The sum of numbers from " + m + " to " + n + " is: " + sum;
+
+
+*/
+
+//Task: While Loop
+/*
+let i = 1;
+while (i <= 10) {
+  document.getElementById("output-display").innerText += "\n" + i;
+  i++;
+}
+
+//For loop to print numbers from 1 to 10
+for (let i = 1; i <= 10; i++) {
+  document.getElementById("output-display").innerText += "\n" + i;
+}
+*/
+let i = 1;
+let sum = 0;
+while (i <= 10) {
+  sum += i;
+  document.getElementById("output-display").innerText +=
+    "\n" + "Current number: " + i + ", Current sum: " + sum;
+  i++;
+}
+document.getElementById("output-display").innerText +=
+  "\n" + "The sum of numbers from 1 to 10 is: " + sum;
+
+//Write a program sum of all the numbers  that are divisible by 3 and 5 between 1 to 100
+let totalSum = 0;
+for (let i = 1; i <= 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    totalSum += i;
+    document.getElementById("output-display").innerText +=
+      "\n" + "Current number: " + i + ", Current total sum: " + totalSum;
+  }
+}
+document.getElementById("output-display").innerText +=
+  "\n" +
+  "The sum of numbers divisible by 3 and 5 from 1 to 100 is: " +
+  totalSum;
