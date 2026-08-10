@@ -478,6 +478,7 @@ for (let i = 1; i <= 10; i++) {
   document.getElementById("output-display").innerText += "\n" + i;
 }
 */
+/*
 let i = 1;
 let sum = 0;
 while (i <= 10) {
@@ -502,3 +503,41 @@ document.getElementById("output-display").innerText +=
   "\n" +
   "The sum of numbers divisible by 3 and 5 from 1 to 100 is: " +
   totalSum;
+  */
+
+/*
+// Task: Do while Loop
+
+let i = 1;
+do {
+  document.getElementById("output-display").innerText += "\n" + i;
+  document.getElementById("output-display").innerText +=
+    "\n" + "Current number: " + i + ", Current sum: " + (i * (i + 1)) / 2;
+  i++;
+} while (i <= 10);
+document.getElementById("output-display").innerText +=
+  "\n" + "-------------------------" + "\n" + "Do while loop completed";
+*/
+
+//Task Break and Continue
+for (let i = 1; i <= 10; i++) {
+  if (i === 5) {
+    document.getElementById("output-display").innerText +=
+      "\n" + "Breaking the loop at i = " + i;
+    break; // Exit the loop when i is 5
+  }
+  document.getElementById("output-display").innerText += "\n" + i;
+}
+document.getElementById("output-display").innerText +=
+  "\n" + "-------------------------" + "\n" + "For loop completed";
+
+for (let j = 1; j <= 10; j++) {
+  if (j === 5) {
+    document.getElementById("output-display").innerText +=
+      "\n" + "Skipping the iteration at j = " + j;
+    continue; // Skip the current iteration when j is 5
+  }
+  document.getElementById("output-display").innerText += "\n" + j;
+}
+document.getElementById("output-display").innerText +=
+  "\n" + "-------------------------" + "\n" + "For loop completed";
