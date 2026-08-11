@@ -519,6 +519,7 @@ document.getElementById("output-display").innerText +=
   "\n" + "-------------------------" + "\n" + "Do while loop completed";
 */
 
+/*
 //Task Break and Continue
 for (let i = 1; i <= 10; i++) {
   if (i === 5) {
@@ -538,6 +539,26 @@ for (let j = 1; j <= 10; j++) {
     continue; // Skip the current iteration when j is 5
   }
   document.getElementById("output-display").innerText += "\n" + j;
+}
+document.getElementById("output-display").innerText +=
+  "\n" + "-------------------------" + "\n" + "For loop completed";
+
+  */
+
+//Task: FizzBuzz
+for (let i = 1; i <= 100; i++) {
+  if (i % 3 == 0 && i % 5 == 0) {
+    document.getElementById("output-display").innerText +=
+      "\n" + i + "===========" + " FizzBuzz";
+  } else if (i % 3 == 0) {
+    document.getElementById("output-display").innerText +=
+      "\n" + i + "========" + "Fizz";
+  } else if (i % 5 == 0) {
+    document.getElementById("output-display").innerText +=
+      "\n" + i + "===========" + " Buzz";
+  } else {
+    document.getElementById("output-display").innerText += "\n" + i;
+  }
 }
 document.getElementById("output-display").innerText +=
   "\n" + "-------------------------" + "\n" + "For loop completed";
