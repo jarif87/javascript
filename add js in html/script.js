@@ -545,6 +545,7 @@ document.getElementById("output-display").innerText +=
 
   */
 
+/*
 //Task: FizzBuzz
 for (let i = 1; i <= 100; i++) {
   if (i % 3 == 0 && i % 5 == 0) {
@@ -562,3 +563,63 @@ for (let i = 1; i <= 100; i++) {
 }
 document.getElementById("output-display").innerText +=
   "\n" + "-------------------------" + "\n" + "For loop completed";
+*/
+/*
+//Traditional function
+function addNumbers(a, b) {
+  return a + b;
+}
+let result = addNumbers(5, 10);
+document.getElementById("output-display").innerText +=
+  "\n" + "The sum of 5 and 10 is: " + result;
+
+*/
+
+/*
+function multiplyNumbers(a, b) {
+  return a * b;
+}
+let m = parseFloat(prompt("Enter first number for multiplication: "));
+let n = parseFloat(prompt("Enter second number for multiplication: "));
+let multiplyResult = multiplyNumbers(m, n);
+document.getElementById("output-display").innerText +=
+  "\n" + "The product of " + m + " and " + n + " is: " + multiplyResult;
+*/
+// Task: IIFE (Immediately Invoked Function Expression)
+/*
+(function () {
+  let x = 10;
+  let y = 20;
+  let sum = x + y;
+  document.getElementById("output-display").innerText +=
+    "\n" + "The sum of " + x + " and " + y + " is: " + sum;
+})();
+*/
+/*
+// Task iife (Immediately Invoked Function Expression) with parameters
+// sum of two numbers
+(function (a, b) {
+  let sum = a + b;
+  document.getElementById("output-display").innerText +=
+    "\n" + "The sum of " + a + " and " + b + " is: " + sum;
+})(
+  parseFloat(prompt("Enter first number for IIFE: ")),
+  parseFloat(prompt("Enter second number for IIFE: ")),
+);
+*/
+
+// Function expression
+/*
+function displayMessage(message) {
+  document.getElementById("output-display").innerText += "\n" + message;
+}
+let x = displayMessage(
+  "Hello, this is a message from the function expression!",
+);
+document.getElementById("output-display").innerText += "\n" + x;
+*/
+
+const displayMessage = function (message) {
+  document.getElementById("output-display").innerText += "\n" + message;
+};
+displayMessage("Hello, this is a message from the function expression!");
