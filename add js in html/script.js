@@ -618,8 +618,37 @@ let x = displayMessage(
 );
 document.getElementById("output-display").innerText += "\n" + x;
 */
+/*
 
 const displayMessage = function (message) {
   document.getElementById("output-display").innerText += "\n" + message;
 };
 displayMessage("Hello, this is a message from the function expression!");
+*/
+// Task: Array
+let fruits = ["apple", "banana", "orange"];
+document.getElementById("output-display").innerText +=
+  "\n" + "Fruits: " + fruits.join(", ");
+
+let names = new Array(100);
+names[0] = "Anisul Islam";
+names[1] = "Rana";
+names[2] = "Rony";
+document.getElementById("output-display").innerText +=
+  "\n" + "Names: " + names.join(", ");
+document.getElementById("output-display").innerText +=
+  "\n" + "Length of names array: " + names.length;
+let pushName = names.push("Rana", "Rony");
+document.getElementById("output-display").innerText +=
+  "\n" + "Names after push: " + names.join(", ");
+let popName = names.pop();
+document.getElementById("output-display").innerText +=
+  "\n" + "Names after pop: " + names.join(", ");
+document.getElementById("output-display").innerText +=
+  "\n" + "Length of names array after pop: " + names.length;
+
+let x = [1, 2, 3, 4, 5];
+let y = [6, 7, 8, 9, 10];
+let z = x.concat(y);
+document.getElementById("output-display").innerText +=
+  "\n" + "Concatenated array: " + z.join(", ");
