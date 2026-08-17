@@ -625,6 +625,7 @@ const displayMessage = function (message) {
 };
 displayMessage("Hello, this is a message from the function expression!");
 */
+/*
 // Task: Array
 let fruits = ["apple", "banana", "orange"];
 document.getElementById("output-display").innerText +=
@@ -652,3 +653,28 @@ let y = [6, 7, 8, 9, 10];
 let z = x.concat(y);
 document.getElementById("output-display").innerText +=
   "\n" + "Concatenated array: " + z.join(", ");
+  */
+
+// Task: Loop In array
+// let num = [10, 20, 30, 40, 50];
+// for (let i = 0; i < 5; i++) {
+//   console.log(num[i]);
+// }
+
+let number2 = new Array();
+let sum = 0;
+for (let x = 0; x < 3; x++) {
+  number2[x] = parseFloat(prompt("Enter your number: "));
+  console.log("Your Number is : ", number2);
+  sum += number2[x];
+}
+
+console.log("Sum is : ", sum);
+
+// Task: Loop In array
+for (let i = 0; i < number2.length; i++) {
+  document.getElementById("output-display").innerText +=
+    "\n" + "Number at index " + i + " is: " + number2[i];
+}
+document.getElementById("output-display").innerText +=
+  "\n" + "The sum of the numbers is: " + sum;
