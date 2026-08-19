@@ -661,6 +661,8 @@ document.getElementById("output-display").innerText +=
 //   console.log(num[i]);
 // }
 
+/*
+
 let number2 = new Array();
 let sum = 0;
 for (let x = 0; x < 3; x++) {
@@ -678,3 +680,35 @@ for (let i = 0; i < number2.length; i++) {
 }
 document.getElementById("output-display").innerText +=
   "\n" + "The sum of the numbers is: " + sum;
+*/
+
+// task: array in library
+
+let name = ["Anisul", "Rana", "Rony", "Sakib", "Shakil", "tamim", "musfiq"];
+// for (let i = 0; i < name.length; i++) {
+//   document.getElementById("output-display").innerText +=
+//     "\n" + "Name at index " + i + " is: " + name[i];
+// }
+
+// name.shift(); // Remove the first element
+// document.getElementById("output-display").innerText +=
+//   "\n" + "After shift, names are: " + name.join(", ");
+// name.unshift("Anisul"); // Add an element at the beginning
+// document.getElementById("output-display").innerText +=
+//   "\n" + "After unshift, names are: " + name.join(", ");
+
+//slice method
+// let slicedNames = name.slice(1, 4);
+// document.getElementById("output-display").innerText +=
+//   "\n" + "Sliced names (index 1 to 4) are: " + slicedNames.join(", ");
+
+name.splice(2, 5, "bangladesh", "india", "pakistan"); // Remove 5 elements starting from index 2 and add new elements
+document.getElementById("output-display").innerText +=
+  "\n" + "After splice, names are: " + name.join(", ");
+
+let numbers = [10, 4, 3, 8, 6, 2, 1, 20, 30, 40, 50];
+numbers.sort(function (a, b) {
+  return a - b; // Sort in ascending order
+});
+document.getElementById("output-display").innerText +=
+  "\n" + "Sorted numbers are: " + numbers.join(", ");
