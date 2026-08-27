@@ -702,6 +702,7 @@ let name = ["Anisul", "Rana", "Rony", "Sakib", "Shakil", "tamim", "musfiq"];
 // document.getElementById("output-display").innerText +=
 //   "\n" + "Sliced names (index 1 to 4) are: " + slicedNames.join(", ");
 
+/*
 name.splice(2, 5, "bangladesh", "india", "pakistan"); // Remove 5 elements starting from index 2 and add new elements
 document.getElementById("output-display").innerText +=
   "\n" + "After splice, names are: " + name.join(", ");
@@ -712,3 +713,26 @@ numbers.sort(function (a, b) {
 });
 document.getElementById("output-display").innerText +=
   "\n" + "Sorted numbers are: " + numbers.join(", ");
+*/
+// Task: One Dimensional Array
+// let oneDArray = [1, 2, 3, 4, 5];
+// document.getElementById("output-display").innerText +=
+//   "\n" + "One Dimensional Array: " + oneDArray.join(", ");
+// // Loop through the array and display each element
+// for (let i = 0; i < oneDArray.length; i++) {
+//   document.getElementById("output-display").innerText +=
+//     "\n" + "Element at index " + i + " is: " + oneDArray[i];
+// }
+// Task:Create a function called highestScore that will-receive a 1d array called scores & return the highest score.
+function highestScore(scores) {
+  let highest = scores[0]; // Assume the first score is the highest
+  for (let i = 1; i < scores.length; i++) {
+    if (scores[i] > highest) {
+      highest = scores[i]; // Update highest if current score is greater
+    }
+  }
+  return highest; // Return the highest score
+}
+let result = highestScore([85, 92, 78, 90, 88]); // Example usage
+document.getElementById("output-display").innerText +=
+  "\n" + "The highest score is: " + result;
