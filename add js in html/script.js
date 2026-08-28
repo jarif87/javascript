@@ -723,6 +723,8 @@ document.getElementById("output-display").innerText +=
 //   document.getElementById("output-display").innerText +=
 //     "\n" + "Element at index " + i + " is: " + oneDArray[i];
 // }
+
+/*
 // Task:Create a function called highestScore that will-receive a 1d array called scores & return the highest score.
 function highestScore(scores) {
   let highest = scores[0]; // Assume the first score is the highest
@@ -736,3 +738,25 @@ function highestScore(scores) {
 let result = highestScore([85, 92, 78, 90, 88]); // Example usage
 document.getElementById("output-display").innerText +=
   "\n" + "The highest score is: " + result;
+*/
+//Task: 2D Array
+function highScore(playerInfo) {
+  let highest = playerInfo[0];
+  let highestScore = playerInfo[0][1];
+  for (let i = 0; i < playerInfo.length; i++) {
+    if (highestScore < playerInfo[i][1]) {
+      highestScore = playerInfo[i][1];
+      highest = playerInfo[i][0];
+    }
+  }
+  return highest;
+}
+
+let playerInfo = [
+  ["Bangla", 20],
+  ["English", 30],
+  ["Math", 50],
+  ["Physics", 70],
+];
+let result = highScore(playerInfo);
+console.log(result);
