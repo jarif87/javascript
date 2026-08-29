@@ -739,6 +739,7 @@ let result = highestScore([85, 92, 78, 90, 88]); // Example usage
 document.getElementById("output-display").innerText +=
   "\n" + "The highest score is: " + result;
 */
+/*
 //Task: 2D Array
 function highScore(playerInfo) {
   let highest = playerInfo[0];
@@ -760,3 +761,68 @@ let playerInfo = [
 ];
 let result = highScore(playerInfo);
 console.log(result);
+*/
+//Task:Create Constructor
+
+// function studentInfo(name, age, cgpa, language) {
+//   this.name = name;
+//   this.age = age;
+//   this.cgpa = cgpa;
+//   this.language = language;
+// }
+
+// let schoolStudentinfo = new studentInfo("shakib", 32, 3.55, [
+//   "bangla",
+//   "English",
+//   "frence",
+// ]);
+// console.log(schoolStudentinfo);
+
+// //Task: Create Object
+// let myObject = {
+//   name: "anisul",
+//   age: 50,
+//   cgpa: 3.88,
+//   location: "Dhaka",
+//   languages: ["bangla", "english"],
+// };
+
+// let myObject2 = {
+//   name: "rakiub",
+//   age: 50,
+//   cgpa: 3.8,
+//   location: "Gazipur",
+//   languages: ["bangla", "english"],
+// };
+
+// let myObject3 = {
+//   name: "shakib",
+//   age: 50,
+//   cgpa: 3.87,
+//   location: "Kapasia",
+//   languages: ["bangla", "english"],
+// };
+
+// console.log(myObject.name);
+
+// Task: Adding function in Constructor
+
+function studentInfo(name, age, cgpa, language) {
+  this.name = name;
+  this.age = age;
+  this.cgpa = cgpa;
+  this.language = language;
+  this.display = function () {
+    console.log(this.name);
+    console.log(this.age);
+    console.log(this.cgpa);
+    console.log(this.language);
+  };
+}
+let schoolStudentinfo = new studentInfo("shakib", 32, 3.55, [
+  "bangla",
+  "English",
+  "frence",
+]);
+// console.log(schoolStudentinfo);
+schoolStudentinfo.display();
