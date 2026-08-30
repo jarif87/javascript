@@ -805,6 +805,7 @@ console.log(result);
 
 // console.log(myObject.name);
 
+/*
 // Task: Adding function in Constructor
 
 function studentInfo(name, age, cgpa, language) {
@@ -826,3 +827,38 @@ let schoolStudentinfo = new studentInfo("shakib", 32, 3.55, [
 ]);
 // console.log(schoolStudentinfo);
 schoolStudentinfo.display();
+*/
+
+//Task: Math Object
+let x = Math.sqrt(23);
+console.log(x);
+
+let a = Math.abs(-9);
+console.log(a);
+
+let b = Math.sin(10);
+console.log(b);
+
+let c = Math.pow(5, 2);
+console.log(c);
+
+let d = Math.floor(6.98);
+console.log(d);
+
+let e = Math.ceil(3.99);
+console.log(e);
+
+let f = Math.round(5.55);
+console.log(f);
+
+let g = Math.max(1, 2, 3, 4, 5, 6, 7, 8);
+console.log(g);
+
+let h = Math.random();
+console.log(h);
+
+let i = Math.floor(Math.random() * 4);
+console.log(i);
+
+let k = Math.floor(Math.random() * 6) + 1;
+console.log(k);
