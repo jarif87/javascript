@@ -829,6 +829,7 @@ let schoolStudentinfo = new studentInfo("shakib", 32, 3.55, [
 schoolStudentinfo.display();
 */
 
+/*
 //Task: Math Object
 let x = Math.sqrt(23);
 console.log(x);
@@ -862,3 +863,24 @@ console.log(i);
 
 let k = Math.floor(Math.random() * 6) + 1;
 console.log(k);
+*/
+
+// Task: Guessing Game
+let numberWin = 0;
+let numberLost = 0;
+for (let i = 0; i <= 5; i++) {
+  let guessNumber = parseInt(prompt("Enter Number between 1 to 5: "));
+  let randomNumber = Math.floor(Math.random() * 5) + 1;
+  if (guessNumber === randomNumber) {
+    console.log("You Have Won");
+    numberWin++;
+  } else {
+    console.log(
+      `You have Lost. Guess Number was: ${guessNumber}\nRandom Number was: ${randomNumber}`,
+    );
+    numberLost++;
+  }
+}
+console.log(`\n--- Game Over ---`);
+console.log("Number Of Win: ", numberWin + "\n");
+console.log("Number of Lost: ", numberLost);
