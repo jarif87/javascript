@@ -864,6 +864,7 @@ console.log(i);
 let k = Math.floor(Math.random() * 6) + 1;
 console.log(k);
 */
+/*
 
 // Task: Guessing Game
 let numberWin = 0;
@@ -884,3 +885,23 @@ for (let i = 0; i <= 5; i++) {
 console.log(`\n--- Game Over ---`);
 console.log("Number Of Win: ", numberWin + "\n");
 console.log("Number of Lost: ", numberLost);
+*/
+
+//Task: date Object
+let date = new Date();
+document.getElementById("output-display").innerText +=
+  "\n" + "Current Date and Time: " + date.toString();
+document.getElementById("output-display").innerText +=
+  "\n" + "Current Year: " + date.getFullYear();
+document.getElementById("output-display").innerText +=
+  "\n" + "Current Month: " + (date.getMonth() + 1);
+document.getElementById("output-display").innerText +=
+  "\n" + "Current Date: " + date.getDate();
+document.getElementById("output-display").innerText +=
+  "\n" + "Current Day: " + date.getDay();
+document.getElementById("output-display").innerText +=
+  "\n" + "Current Hours: " + date.getHours();
+document.getElementById("output-display").innerText +=
+  "\n" + "Current Minutes: " + date.getMinutes();
+document.getElementById("output-display").innerText +=
+  "\n" + "Current Seconds: " + date.getSeconds();
