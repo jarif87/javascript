@@ -1,0 +1,32 @@
+{
+  "students": [
+    {
+      "name": "John Doe",
+      "middleName": "Michael",
+      "lastName": "Smith",
+      "age": 25,
+      "city": "New York",
+      "cgpa": 3.8,
+      "isGraduated": false,
+      "courses": ["Mathematics", "Computer Science", "Physics"],
+      "address": {
+        "street": "123 Main St",
+        "zipCode": "10001"
+      }
+    },
+    {
+      "name": "Jane Doe",
+      "middleName": "Elizabeth",
+      "lastName": "Johnson",
+      "age": 28,
+      "city": "Los Angeles",
+      "cgpa": 3.9,
+      "isGraduated": true,
+      "courses": ["Biology", "Chemistry", "English Literature"],
+      "address": {
+        "street": "456 Elm St",
+        "zipCode": "90001"
+      }
+    }
+  ]
+}

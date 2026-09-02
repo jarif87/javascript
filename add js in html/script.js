@@ -886,7 +886,7 @@ console.log(`\n--- Game Over ---`);
 console.log("Number Of Win: ", numberWin + "\n");
 console.log("Number of Lost: ", numberLost);
 */
-
+/*
 //Task: date Object
 let date = new Date();
 document.getElementById("output-display").innerText +=
@@ -905,3 +905,6 @@ document.getElementById("output-display").innerText +=
   "\n" + "Current Minutes: " + date.getMinutes();
 document.getElementById("output-display").innerText +=
   "\n" + "Current Seconds: " + date.getSeconds();
+*/
+
+// Task: Introduction to Json

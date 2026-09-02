@@ -1,0 +1,16 @@
+{
+  "friends": [
+    {
+      "name": "Anisul Islam",
+      "age": 30,
+      "city": "Dhaka",
+      "cgpa": 3.5
+    },
+    {
+      "name": "Rakib",
+      "age": 30,
+      "city": "Gazipur",
+      "cgpa": 3.7
+    }
+  ]
+}
