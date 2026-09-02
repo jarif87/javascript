@@ -1,0 +1,15 @@
+let f = require("./friends.json");
+console.log("===================================");
+console.log(f);
+console.log(f.friends[0]);
+console.log("===================================");
+console.log(f.friends[0].name);
+console.log("===================================");
+f.friends[0].name = "John Doe";
+console.log(f.friends[0].name);
+console.log("===================================");
+console.log(f);
+console.log("===================================");
+console.log(f.friends[1].name);
+console.log("===================================");
+console.log(f.friends[1].age);
