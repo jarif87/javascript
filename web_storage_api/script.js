@@ -33,16 +33,20 @@
 // sessionStorage.removeItem("sessionPassword");
 // sessionStorage.clear();
 
-let user = {
-  name: "Anisul Islam",
-  email: "x@example.com",
-  age: 30,
-  address: {
-    street: "123 Main St",
-    city: "Dhaka",
-    country: "Bangladesh",
-  },
-};
-sessionStorage.setItem("user", JSON.stringify(user));
-let retrievedUser = sessionStorage.getItem("user");
-console.log("Retrieved User:", JSON.parse(retrievedUser));
+// let user = {
+//   name: "Anisul Islam",
+//   email: "x@example.com",
+//   age: 30,
+//   address: {
+//     street: "123 Main St",
+//     city: "Dhaka",
+//     country: "Bangladesh",
+//   },
+// };
+// sessionStorage.setItem("user", JSON.stringify(user));
+// let retrievedUser = sessionStorage.getItem("user");
+// console.log("Retrieved User:", JSON.parse(retrievedUser));
+
+document.cookie =
+  "username=Anisul Islam; expires=Thu, 3 sep 2026 18:03:59 GMT; path=/";
+console.log("Cookie:", document.cookie);
