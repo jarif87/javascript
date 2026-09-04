@@ -47,6 +47,6 @@
 // let retrievedUser = sessionStorage.getItem("user");
 // console.log("Retrieved User:", JSON.parse(retrievedUser));
 
-document.cookie =
-  "username=Anisul Islam; expires=Thu, 3 sep 2026 18:03:59 GMT; path=/";
-console.log("Cookie:", document.cookie);
+// document.cookie =
+//   "username=Anisul Islam; expires=Thu, 3 sep 2026 18:03:59 GMT; path=/";
+// console.log("Cookie:", document.cookie);
