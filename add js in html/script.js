@@ -909,17 +909,25 @@ document.getElementById("output-display").innerText +=
 
 // Task: Introduction to Json
 
-document.getElementById("heading1").innerHTML =
-  "This is me from Bangladesh and I am a web developer";
+// document.getElementById("heading1").innerHTML =
+//   "This is me from Bangladesh and I am a web developer";
 
-document.getElementById("para1").innerHTML =
-  "I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code";
-document.getElementsByTagName("h1")[0].style.color = "red";
-document.getElementsByTagName("h1")[0].style.fontSize = "50px";
-document.getElementsByTagName("p")[0].style.color = "blue";
-document.getElementsByTagName("p")[0].style.fontSize = "20px";
-document.getElementsByTagName("h1")[0].style.textAlign = "center";
-document.getElementsByTagName("p")[0].style.textAlign = "justify";
+// document.getElementById("para1").innerHTML =
+//   "I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code";
+// document.getElementsByTagName("h1")[0].style.color = "red";
+// document.getElementsByTagName("h1")[0].style.fontSize = "50px";
+// document.getElementsByTagName("p")[0].style.color = "blue";
+// document.getElementsByTagName("p")[0].style.fontSize = "20px";
+// document.getElementsByTagName("h1")[0].style.textAlign = "center";
+// document.getElementsByTagName("p")[0].style.textAlign = "justify";
 
-document.getElementsByTagName("h1")[0].innerHTML =
-  "This is me from Bangladesh and I am a web developer, i am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code";
+// document.getElementsByTagName("h1")[0].innerHTML =
+//   "This is me from Bangladesh and I am a web developer, i am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code";
+
+//task:QuerySelector
+// document.querySelector("#heading1").innerHTML =
+//   "This is me from Bangladesh and I am a web developer, i am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code and I am a web developer and I love to code";
+// document.querySelector(".paragraph").innerHTML =
+//   "I am a web developer and I love to code";
+// document.querySelector("#heading1").style.color = "red";
+// document.querySelector("h1").style.fontSize = "50px";
