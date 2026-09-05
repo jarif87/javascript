@@ -931,3 +931,19 @@ document.getElementById("output-display").innerText +=
 //   "I am a web developer and I love to code";
 // document.querySelector("#heading1").style.color = "red";
 // document.querySelector("h1").style.fontSize = "50px";
+document.querySelector("a").style.color = "blue";
+document.querySelector("a").style.fontSize = "20px";
+document.querySelector("a").style.textAlign = "justify";
+document.querySelector("a").innerHTML = "Home_QuerySelector";
+
+document.querySelector("li a").style.color = "green";
+let liLinks = document.querySelectorAll("li a");
+const colors = ["green", "blue", "red", "purple"];
+for (let i = 0; i < liLinks.length; i++) {
+  liLinks[i].style.color = colors[i];
+  liLinks[i].style.fontSize = "20px";
+  liLinks[i].style.textAlign = "justify";
+  liLinks[i].innerHTML = "Home_QuerySelectorAll";
+}
+document.querySelector(".my-div a").style.fontSize = "50px";
+document.querySelector(".my-div a").style.color = "darkorange";
