@@ -931,6 +931,7 @@ document.getElementById("output-display").innerText +=
 //   "I am a web developer and I love to code";
 // document.querySelector("#heading1").style.color = "red";
 // document.querySelector("h1").style.fontSize = "50px";
+/*
 document.querySelector("a").style.color = "blue";
 document.querySelector("a").style.fontSize = "20px";
 document.querySelector("a").style.textAlign = "justify";
@@ -947,3 +948,25 @@ for (let i = 0; i < liLinks.length; i++) {
 }
 document.querySelector(".my-div a").style.fontSize = "50px";
 document.querySelector(".my-div a").style.color = "darkorange";
+*/
+
+// function myFunction() {
+//   document.getElementById("output-display").innerText +=
+//     "\n" + "This is a message from the button click event!";
+// }
+// function myMessege() {
+//   document.querySelector("#myFunction2").innerText +=
+//     "\n" + "This is a message from the button click event!";
+// // }
+// myMessege();
+
+function myFunction() {
+  document.querySelector("#paragraph").innerText +=
+    "\n" + "This is a message from the button click event!";
+}
+
+function myFunction2() {
+  document.querySelector("#paragraph").innerText +=
+    "\n" +
+    "This is a message from the button click event!, and this is a message from the button click event!";
+}
