@@ -960,13 +960,27 @@ document.querySelector(".my-div a").style.color = "darkorange";
 // // }
 // myMessege();
 
-function myFunction() {
-  document.querySelector("#paragraph").innerText +=
-    "\n" + "This is a message from the button click event!";
+// function myFunction() {
+//   document.querySelector("#paragraph").innerText +=
+//     "\n" + "This is a message from the button click event!";
+// }
+
+// function myFunction2() {
+//   document.querySelector("#paragraph").innerText +=
+//     "\n" +
+//     "This is a message from the button click event!, and this is a message from the button click event!";
+// }
+
+function myImage1() {
+  // document.querySelector("#myImage1").src = "img.png";
+  let image1 = document.querySelector("#myImage1");
+  image1.src = "img.png";
+  image1.style.display = "block";
 }
 
-function myFunction2() {
-  document.querySelector("#paragraph").innerText +=
-    "\n" +
-    "This is a message from the button click event!, and this is a message from the button click event!";
+function myImage2() {
+  // document.querySelector("#myImage2").src = "img2.jpg";
+  let image2 = document.querySelector("#myImage2");
+  image2.src = "img2.jpg";
+  image2.style.display = "block";
 }
