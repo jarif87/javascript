@@ -971,16 +971,16 @@ document.querySelector(".my-div a").style.color = "darkorange";
 //     "This is a message from the button click event!, and this is a message from the button click event!";
 // }
 
-function myImage1() {
-  // document.querySelector("#myImage1").src = "img.png";
-  let image1 = document.querySelector("#myImage1");
-  image1.src = "img.png";
-  image1.style.display = "block";
-}
+// function myImage1() {
+//   // document.querySelector("#myImage1").src = "img.png";
+//   let image1 = document.querySelector("#myImage1");
+//   image1.src = "img.png";
+//   image1.style.display = "block";
+// }
 
-function myImage2() {
-  // document.querySelector("#myImage2").src = "img2.jpg";
-  let image2 = document.querySelector("#myImage2");
-  image2.src = "img2.jpg";
-  image2.style.display = "block";
-}
+// function myImage2() {
+//   // document.querySelector("#myImage2").src = "img2.jpg";
+//   let image2 = document.querySelector("#myImage2");
+//   image2.src = "img2.jpg";
+//   image2.style.display = "block";
+// }
