@@ -988,3 +988,4 @@ document.querySelector(".my-div a").style.color = "darkorange";
 document.getElementsByTagName("a")[0].style.color = "red";
 document.getElementsByTagName("a")[0].style.fontSize = "20px";
 document.getElementsByTagName("a")[0].style.textAlign = "justify";
+document.getElementsByTagName("a")[0].href = "https://www.google.com";
