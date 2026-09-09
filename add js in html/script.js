@@ -990,6 +990,18 @@ document.querySelector(".my-div a").style.color = "darkorange";
 // document.getElementsByTagName("a")[0].style.textAlign = "justify";
 // document.getElementsByTagName("a")[0].href = "https://www.google.com";
 let h1 = document.getElementsByTagName("h1")[0];
-h1.style.color = "red";
+h1.style.color = "yellow";
 h1.style.fontSize = "50px";
 h1.style.textAlign = "center";
+
+let h2 = document.getElementsByTagName("h2")[0];
+h2.style.color = "orange";
+h2.style.fontSize = "30px";
+h2.style.textAlign = "center";
+
+let h3 = document.createElement("h3");
+h3.innerText = "This is a new heading created using JavaScript";
+h3.style.color = "green";
+h3.style.fontSize = "25px";
+h3.style.textAlign = "center";
+document.body.appendChild(h3);
