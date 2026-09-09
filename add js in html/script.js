@@ -984,3 +984,7 @@ document.querySelector(".my-div a").style.color = "darkorange";
 //   image2.src = "img2.jpg";
 //   image2.style.display = "block";
 // }
+
+document.getElementsByTagName("a")[0].style.color = "red";
+document.getElementsByTagName("a")[0].style.fontSize = "20px";
+document.getElementsByTagName("a")[0].style.textAlign = "justify";
