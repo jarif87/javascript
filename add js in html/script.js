@@ -985,7 +985,11 @@ document.querySelector(".my-div a").style.color = "darkorange";
 //   image2.style.display = "block";
 // }
 
-document.getElementsByTagName("a")[0].style.color = "red";
-document.getElementsByTagName("a")[0].style.fontSize = "20px";
-document.getElementsByTagName("a")[0].style.textAlign = "justify";
-document.getElementsByTagName("a")[0].href = "https://www.google.com";
+// document.getElementsByTagName("a")[0].style.color = "red";
+// document.getElementsByTagName("a")[0].style.fontSize = "20px";
+// document.getElementsByTagName("a")[0].style.textAlign = "justify";
+// document.getElementsByTagName("a")[0].href = "https://www.google.com";
+let h1 = document.getElementsByTagName("h1")[0];
+h1.style.color = "red";
+h1.style.fontSize = "50px";
+h1.style.textAlign = "center";
