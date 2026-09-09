@@ -1005,3 +1005,6 @@ h3.style.color = "green";
 h3.style.fontSize = "25px";
 h3.style.textAlign = "center";
 document.body.appendChild(h3);
+
+let myDiv = document.getElementsByClassName("my-div")[0];
+myDiv.appendChild(h3);
