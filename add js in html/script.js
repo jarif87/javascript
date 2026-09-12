@@ -1023,27 +1023,28 @@ let myDiv2 = document.getElementsByClassName("my-div")[0];
 myDiv2.insertBefore(h4, myDiv2.firstChild);
 */
 
-let myPhoto = document.getElementById("myPhoto");
-let myPhoto2 = document.getElementById("myPhoto2");
-let counter = 0;
-function next() {
-  counter++;
-  if (counter % 2 === 0) {
-    myPhoto.style.display = "none";
-    myPhoto2.style.display = "block";
-  } else {
-    myPhoto.style.display = "block";
-    myPhoto2.style.display = "none";
-  }
-}
+// let myPhoto = document.getElementById("myPhoto");
+// let myPhoto2 = document.getElementById("myPhoto2");
+// let counter = 0;
+// function next() {
+//   counter++;
+//   if (counter % 2 === 0) {
+//     myPhoto.style.display = "none";
+//     myPhoto2.style.display = "block";
+//   } else {
+//     myPhoto.style.display = "block";
+//     myPhoto2.style.display = "none";
+//   }
+// }
 
-function previous() {
-  counter--;
-  if (counter % 2 === 0) {
-    myPhoto.style.display = "none";
-    myPhoto2.style.display = "block";
-  } else {
-    myPhoto.style.display = "block";
-    myPhoto2.style.display = "none";
-  }
-}
+// function previous() {
+//   counter--;
+//   if (counter % 2 === 0) {
+//     myPhoto.style.display = "none";
+//     myPhoto2.style.display = "block";
+//   } else {
+//     myPhoto.style.display = "block";
+
+//     myPhoto2.style.display = "none";
+//   }
+// }
