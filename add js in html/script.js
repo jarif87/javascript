@@ -989,6 +989,7 @@ document.querySelector(".my-div a").style.color = "darkorange";
 // document.getElementsByTagName("a")[0].style.fontSize = "20px";
 // document.getElementsByTagName("a")[0].style.textAlign = "justify";
 // document.getElementsByTagName("a")[0].href = "https://www.google.com";
+/*
 let h1 = document.getElementsByTagName("h1")[0];
 h1.style.color = "yellow";
 h1.style.fontSize = "50px";
@@ -1008,3 +1009,41 @@ document.body.appendChild(h3);
 
 let myDiv = document.getElementsByClassName("my-div")[0];
 myDiv.appendChild(h3);
+
+myDiv.removeChild(h3);
+
+let h4 = document.createElement("h3");
+h4.innerText = "This is a new heading created using JavaScript";
+h4.style.color = "green";
+h4.style.fontSize = "25px";
+h4.style.textAlign = "center";
+document.body.appendChild(h4);
+
+let myDiv2 = document.getElementsByClassName("my-div")[0];
+myDiv2.insertBefore(h4, myDiv2.firstChild);
+*/
+
+let myPhoto = document.getElementById("myPhoto");
+let myPhoto2 = document.getElementById("myPhoto2");
+let counter = 0;
+function next() {
+  counter++;
+  if (counter % 2 === 0) {
+    myPhoto.style.display = "none";
+    myPhoto2.style.display = "block";
+  } else {
+    myPhoto.style.display = "block";
+    myPhoto2.style.display = "none";
+  }
+}
+
+function previous() {
+  counter--;
+  if (counter % 2 === 0) {
+    myPhoto.style.display = "none";
+    myPhoto2.style.display = "block";
+  } else {
+    myPhoto.style.display = "block";
+    myPhoto2.style.display = "none";
+  }
+}
