@@ -1048,3 +1048,43 @@ myDiv2.insertBefore(h4, myDiv2.firstChild);
 //     myPhoto2.style.display = "none";
 //   }
 // }
+
+// function addStyle() {
+//   let paragraph = document.querySelector("#para1");
+//   paragraph.style.color = "blue";
+//   paragraph.style.fontSize = "50px";
+//   paragraph.style.fontWeight = "bold";
+//   paragraph.style.textAlign = "center";
+//   paragraph.style.backgroundColor = "yellow";
+//   paragraph.style.padding = "20px";
+//   paragraph.style.border = "2px solid red";
+//   paragraph.style.borderRadius = "40px";
+//   paragraph.style.boxShadow = "5px 5px 10px gray";
+//   paragraph.style.fontFamily = "Arial, sans-serif";
+//   paragraph.style.lineHeight = "1.5";
+// }
+
+// function removeStyle() {
+//   let paragraph = document.querySelector("#para1");
+//   paragraph.style.color = "";
+//   paragraph.style.fontSize = "";
+//   paragraph.style.fontWeight = "";
+//   paragraph.style.textAlign = "";
+//   paragraph.style.backgroundColor = "";
+//   paragraph.style.padding = "";
+//   paragraph.style.border = "";
+//   paragraph.style.borderRadius = "";
+//   paragraph.style.boxShadow = "";
+//   paragraph.style.fontFamily = "";
+//   paragraph.style.lineHeight = "";
+// }
+
+function addStyle() {
+  let paragraph = document.querySelector("#para1");
+  paragraph.classList.add("para1");
+}
+
+function removeStyle() {
+  let paragraph = document.querySelector("#para1");
+  paragraph.classList.remove("para1");
+}
