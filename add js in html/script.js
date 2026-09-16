@@ -1078,13 +1078,19 @@ myDiv2.insertBefore(h4, myDiv2.firstChild);
 //   paragraph.style.fontFamily = "";
 //   paragraph.style.lineHeight = "";
 // }
+/*
+// function addStyle() {
+//   let paragraph = document.querySelector("#para1");
+//   paragraph.classList.add("para1");
+// }
 
-function addStyle() {
-  let paragraph = document.querySelector("#para1");
-  paragraph.classList.add("para1");
-}
-
-function removeStyle() {
-  let paragraph = document.querySelector("#para1");
-  paragraph.classList.remove("para1");
-}
+// function removeStyle() {
+//   let paragraph = document.querySelector("#para1");
+//   paragraph.classList.remove("para1");
+// }
+*/
+// Event Listeners
+document.querySelector("button").addEventListener("click", function (event) {
+  document.getElementById("output-display").innerText +=
+    "\n" + "This is a message from the button click event!";
+});
