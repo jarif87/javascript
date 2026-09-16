@@ -1094,3 +1094,13 @@ document.querySelector("button").addEventListener("click", function (event) {
   document.getElementById("output-display").innerText +=
     "\n" + "This is a message from the button click event!";
 });
+
+let h1 = document.querySelector("h1");
+
+h1.addEventListener("mouseover", function (event) {
+  h1.classList.add("event-heading");
+});
+
+h1.addEventListener("mouseout", function (event) {
+  h1.classList.remove("event-heading");
+});
