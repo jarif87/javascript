@@ -1089,6 +1089,7 @@ myDiv2.insertBefore(h4, myDiv2.firstChild);
 //   paragraph.classList.remove("para1");
 // }
 */
+/*
 // Event Listeners
 document.querySelector("button").addEventListener("click", function (event) {
   document.getElementById("output-display").innerText +=
@@ -1104,3 +1105,26 @@ h1.addEventListener("mouseover", function (event) {
 h1.addEventListener("mouseout", function (event) {
   h1.classList.remove("event-heading");
 });
+*/
+// document.querySelector(".button1").addEventListener("click", function (event) {
+//   let text = this.innerHTML;
+//   document.querySelector("h1").innerHTML = text + " is Clicked";
+// });
+
+// document.querySelector(".button2").addEventListener("click", function (event) {
+//   let text = this.innerHTML;
+//   document.querySelector("h1").innerHTML = text + " is Clicked";
+// });
+
+// document.querySelector(".button3").addEventListener("click", function (event) {
+//   let text = this.innerHTML;
+//   document.querySelector("h1").innerHTML = text + " is Clicked";
+// });
+for (let i = 0; i < 3; i++) {
+  document
+    .querySelectorAll(".button")
+    [i].addEventListener("click", function (event) {
+      let text = this.innerHTML;
+      document.querySelector("h1").innerHTML = text + " is Clicked";
+    });
+}
