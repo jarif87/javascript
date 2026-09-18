@@ -1120,11 +1120,24 @@ h1.addEventListener("mouseout", function (event) {
 //   let text = this.innerHTML;
 //   document.querySelector("h1").innerHTML = text + " is Clicked";
 // });
-for (let i = 0; i < 3; i++) {
-  document
-    .querySelectorAll(".button")
-    [i].addEventListener("click", function (event) {
-      let text = this.innerHTML;
-      document.querySelector("h1").innerHTML = text + " is Clicked";
-    });
+// for (let i = 0; i < 3; i++) {
+//   document
+//     .querySelectorAll(".button")
+//     [i].addEventListener("click", function (event) {
+//       let text = this.innerHTML;
+//       document.querySelector("h1").innerHTML = text + " is Clicked";
+//     });
+// }
+let buttons = document.querySelectorAll(".button");
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", function () {
+    let text = this.innerHTML;
+    console.log(text);
+    switch (text) {
+      case "button 1":
+        let audio = new Audio("audio.mp3");
+        audio.play();
+        break;
+    }
+  });
 }
