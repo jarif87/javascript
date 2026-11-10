@@ -1,0 +1,20 @@
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #98a7b8;
+  color: white;
+  border-radius: 30px;
+  font-family: Arial, sans-serif;
+  /* Adds space to the right of each button */
+  margin-right: 15px;
+}
+
+.animate {
+  transform: scale(1.1);
+  background-color: #ffcccc; /* Light red, or any color you prefer */
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
