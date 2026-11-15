@@ -13,14 +13,27 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
-    <label for="name">Name:<input type="text" id="name" /></label>
+    <!-- <label for="name"
+      >Name:<input type="text" id="name" class="name-input"
+    /></label> -->
+    <!-- <div>
+      <h1>Programming Languages</h1>
 
+      <label for="C"
+        ><input type="checkbox" name="C" id="C" value="C" /> C</label
+      >
+      <label for="Java"
+        ><input type="checkbox" name="Java" id="Java" value="Java" />
+        Java</label
+      >
+    </div> -->
+
+    <label for="department">Department:</label>
+    <select name="department" id="department">
+      <option value="HR">HR</option>
+      <option value="IT">IT</option>
+      <option value="Finance">Finance</option>
+    </select>
     <script src="script.js" async defer></script>
   </body>
 </html>
