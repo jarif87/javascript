@@ -39,16 +39,45 @@
 //   }
 // }
 
-let inputVar = document.querySelector("#department");
-console.log(inputVar);
+// let inputVar = document.querySelector("#department");
+// console.log(inputVar);
 
-inputVar.addEventListener("change", changeHandler);
+// inputVar.addEventListener("change", changeHandler);
 
-function changeHandler(event) {
-  console.log(event);
-  console.log(event.type);
-  console.log(event.target);
-  console.log(event.target.value);
-  console.log(event.target.id);
-  console.log(event.target.className);
+// function changeHandler(event) {
+//   console.log(event);
+//   console.log(event.type);
+//   console.log(event.target);
+//   console.log(event.target.value);
+//   console.log(event.target.id);
+//   console.log(event.target.className);
+// }
+
+//Submit event
+let myForm = document.querySelector("form");
+let myName = myForm.querySelector("div #name");
+console.log(myName);
+
+let myEmail = myForm.querySelector("div #email");
+console.log(myEmail);
+let myPassword = myForm.querySelector("div #password");
+console.log(myPassword);
+console.log("#".repeat(100));
+
+myForm.addEventListener("submit", submitHandler);
+
+function submitHandler(event) {
+  event.preventDefault();
+  console.log("Form Submitted");
+  console.log(myName.value);
+  console.log(myEmail.value);
+  console.log(myPassword.value);
+
+  const userInfo = {
+    name: myName.value,
+    email: myEmail.value,
+    password: myPassword.value,
+  };
+  console.log(userInfo);
+  myForm.reset();
 }
