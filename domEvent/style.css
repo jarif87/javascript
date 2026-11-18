@@ -1,4 +1,4 @@
-.my-0,
+/* .my-0,
 .my-1 {
   font-size: 20px;
   font-weight: normal;
@@ -8,25 +8,29 @@
   display: flex;
   align-items: center;
 }
-
+*/
 /* Gives every label the exact same width so inputs start at the same spot */
+/*
 .my-0 label {
   width: 110px;
 }
-
+*/
 /* Ensures all 3 text boxes are the exact same length and height */
+/*
 .my-0 input {
   width: 220px;
   padding: 6px 8px;
   font-size: 16px;
   box-sizing: border-box;
 }
-
+*/
 /* Styles the submit button properly */
+/*
 .my-1 input[type="submit"] {
   padding: 6px 20px;
   font-size: 16px;
   border-radius: 30px;
   border: 1px solid #000;
   cursor: pointer;
-}
+} 
+*/
